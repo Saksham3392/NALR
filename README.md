@@ -13,7 +13,7 @@ A high-performance, interactive MCQ practice and examination simulation platform
 Experience the platform in action directly in your browser without local setup:  
 👉 **https://nalr.onrender.com**
 
-And to view in localhost offline
+And to view in localhost in browser offline
 ```cmd
 cd /d "c:\Users\Asus\Downloads\CSE AI 5th Sem\NALR\NALR MCQs" && python serve.py
 ```

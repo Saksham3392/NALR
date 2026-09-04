@@ -1,0 +1,194 @@
+/* ==========================================================================
+   AGAI ST-2 MASTERCLASS — DESIGN SYSTEM (JavaProgrammingQ Color Theme)
+   ========================================================================== */
+
+:root {
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", "DM Mono", Consolas, "Courier New", monospace;
+
+  /* Warm Editorial Light Theme (from JavaProgrammingQ) */
+  --bg: #f8f6f0;
+  --bg-gradient: radial-gradient(circle at 10% 10%, rgba(220, 212, 195, 0.3) 0%, transparent 40%),
+                 radial-gradient(circle at 90% 90%, rgba(230, 223, 208, 0.3) 0%, transparent 40%),
+                 #f8f6f0;
+  --card-bg: #ffffff;
+  --card-sub-bg: #f4f0e6;
+  --card-hover: #ede8dc;
+  --card-glass: rgba(255, 255, 255, 0.92);
+  
+  --ink-primary: #181e30;
+  --ink-secondary: #5e667e;
+  --ink-muted: #8790a8;
+  --border-color: #dcd4c3;
+  --border-subtle: #e6dfd0;
+  --border-glow: rgba(37, 99, 235, 0.25);
+  
+  --primary-blue: #2563eb;
+  --primary-blue-hover: #1d4ed8;
+  --primary-blue-bg: #eff6ff;
+  --primary-blue-border: #bfdbfe;
+  --primary-gradient: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #4f46e5 100%);
+  
+  --emerald-green: #15803d;
+  --emerald-green-bg: rgba(21, 128, 61, 0.1);
+  --emerald-green-border: rgba(21, 128, 61, 0.28);
+  --emerald-green-text: #14532d;
+  --emerald-gradient: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  
+  --crimson-red: #b91c1c;
+  --crimson-red-bg: rgba(185, 28, 28, 0.1);
+  --crimson-red-border: rgba(185, 28, 28, 0.28);
+  --crimson-red-text: #7f1d1d;
+  --crimson-gradient: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  
+  --amber-gold: #b45309;
+  --amber-gold-bg: rgba(180, 83, 9, 0.1);
+  --amber-gold-border: rgba(180, 83, 9, 0.28);
+  --amber-gold-text: #78350f;
+  --amber-gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+  
+  --purple-accent: #7c3aed;
+  --purple-accent-bg: #faf5ff;
+  --purple-accent-border: #e9d5ff;
+  --purple-gradient: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+
+  /* Shadows & Depth */
+  --shadow-sm: 0 2px 4px rgba(24, 30, 48, 0.04), 0 1px 2px rgba(24, 30, 48, 0.02);
+  --shadow-md: 0 4px 16px -2px rgba(24, 30, 48, 0.07), 0 2px 6px -1px rgba(24, 30, 48, 0.04);
+  --shadow-lg: 0 16px 32px -4px rgba(24, 30, 48, 0.09), 0 6px 12px -2px rgba(24, 30, 48, 0.04);
+  --shadow-glow-blue: 0 0 20px rgba(37, 99, 235, 0.25);
+  --shadow-glow-green: 0 0 20px rgba(21, 128, 61, 0.25);
+  --shadow-glow-purple: 0 0 20px rgba(124, 58, 237, 0.25);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  
+  --radius-xl: 20px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --radius-xs: 5px;
+  
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Deep Navy / Indigo Theme (from JavaProgrammingQ Default Dark) */
+[data-theme="dark"] {
+  --bg: #121624;
+  --bg-gradient: radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
+                 radial-gradient(circle at 85% 85%, rgba(180, 211, 48, 0.05) 0%, transparent 45%),
+                 #121624;
+  --card-bg: #1a2138;
+  --card-sub-bg: #222b48;
+  --card-hover: #252e4c;
+  --card-glass: rgba(26, 33, 56, 0.92);
+  
+  --ink-primary: #fbfaf6;
+  --ink-secondary: #9ea8c5;
+  --ink-muted: #6a7491;
+  --border-color: #2b3554;
+  --border-subtle: #222a42;
+  --border-glow: rgba(59, 130, 246, 0.3);
+  
+  --primary-blue: #3b82f6;
+  --primary-blue-hover: #2563eb;
+  --primary-blue-bg: rgba(59, 130, 246, 0.16);
+  --primary-blue-border: rgba(59, 130, 246, 0.35);
+  --primary-gradient: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+  
+  --emerald-green: #3ecf8e;
+  --emerald-green-bg: rgba(62, 207, 142, 0.14);
+  --emerald-green-border: rgba(62, 207, 142, 0.35);
+  --emerald-green-text: #6ee7b7;
+  
+  --crimson-red: #f87171;
+  --crimson-red-bg: rgba(248, 113, 113, 0.14);
+  --crimson-red-border: rgba(248, 113, 113, 0.35);
+  --crimson-red-text: #fca5a5;
+  
+  --amber-gold: #fbbf24;
+  --amber-gold-bg: rgba(251, 191, 36, 0.14);
+  --amber-gold-border: rgba(251, 191, 36, 0.35);
+  --amber-gold-text: #fde68a;
+
+  --purple-accent: #a78bfa;
+  --purple-accent-bg: rgba(167, 139, 250, 0.14);
+  --purple-accent-border: rgba(167, 139, 250, 0.35);
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px -2px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 32px -4px rgba(0, 0, 0, 0.55);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--ink-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background 0.35s ease, color 0.3s ease;
+}
+
+button {
+  font: inherit;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+h1, h2, h3, .header-title-group h1, .topic-full-title, .mod-guide-header h2 {
+  font-family: var(--font-display), var(--font-sans);
+}
+
+/* Custom Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-muted);
+}
+
+button {
+  font: inherit;
+  outline: none;
+}
+
+.app-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px 28px 40px;
+}
+
+/* Canvas Confetti Layer */
+#confettiCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 9999999;
+}

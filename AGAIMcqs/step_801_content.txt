@@ -1,0 +1,108 @@
+Created At: 2026-09-07T20:09:01+05:30
+Completed At: 2026-09-07T20:09:01+05:30
+File Path: `file:///c:/Users/Asus/Downloads/CSE%20AI%205th%20Sem/AGAI/AGAIMcqs/app.js`
+Total Lines: 1217
+Total Bytes: 47200
+Showing lines 1 to 100
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: 
+2: function navigateToModuleGuide(moduleId) {
+3:   activeGuideModuleId = moduleId;
+4:   currentViewingMode = "module_guide";
+5:   const firstQIdx = QUIZ_QUESTIONS.findIndex(q => q.module_id === moduleId);
+6:   if (firstQIdx !== -1) {
+7:     currentQIndex = firstQIdx;
+8:   }
+9:   const modal = document.getElementById("syllabusRoadmapModal");
+10:   if (modal) modal.classList.remove("is-active");
+11:   renderApplication();
+12:   window.scrollTo({ top: 0, behavior: "smooth" });
+13: }
+14: 
+15: // Main App Controller with Hardened State, Search, Modes, and Live Simulators
+16: const STORAGE_KEY = "AGAI_ST2_FINAL_STATE_V8";
+17: let currentQIndex = 0;
+18: let currentViewingMode = "question"; // "question" | "module_guide"
+19: let isExamMode = false;
+20: let activeGuideModuleId = "mod1";
+21: let userPracticeAnswers = {};
+22: let userExamAnswers = {};
+23: let userReviewFlags = new Set();
+24: let userSampleAnswers = {};
+25: let isTheoryCollapsed = false;
+26: let isDarkMode = false;
+27: let searchQuery = "";
+28: 
+29: function loadStoredState() {
+30:   try {
+31:     const raw = localStorage.getItem(STORAGE_KEY);
+32:     if (raw) {
+33:       const data = JSON.parse(raw);
+34:       currentQIndex = (typeof data.currentQIndex === "number" && data.currentQIndex >= 0 && data.currentQIndex < QUIZ_QUESTIONS.length) ? data.currentQIndex : 0;
+35:       userPracticeAnswers = (data.userPracticeAnswers && typeof data.userPracticeAnswers === "object") 
+36:         ? data.userPracticeAnswers 
+37:         : ((data.userExamAnswers && typeof data.userExamAnswers === "object") ? data.userExamAnswers : {});
+38:       userExamAnswers = (data.userExamAnswersMode && typeof data.userExamAnswersMode === "object") 
+39:         ? data.userExamAnswersMode 
+40:         : {};
+41:       userReviewFlags = new Set(Array.isArray(data.userReviewFlags) ? data.userReviewFlags : []);
+42:       userSampleAnswers = (data.userSampleAnswers && typeof data.userSampleAnswers === "object") ? data.userSampleAnswers : {};
+43:       isDarkMode = Boolean(data.isDarkMode);
+44:     }
+45:   } catch (e) {
+46:     console.warn("Resetting stored state due to error", e);
+47:     currentQIndex = 0;
+48:     userPracticeAnswers = {};
+49:     userExamAnswers = {};
+50:     userReviewFlags = new Set();
+51:     userSampleAnswers = {};
+52:   }
+53: }
+54: 
+55: function saveCurrentState() {
+56:   try {
+57:     const data = {
+58:       currentQIndex,
+59:       userPracticeAnswers,
+60:       userExamAnswersMode: userExamAnswers,
+61:       userReviewFlags: Array.from(userReviewFlags),
+62:       userSampleAnswers,
+63:       isDarkMode
+64:     };
+65:     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+66:   } catch (e) {
+67:     console.warn("Failed to save state", e);
+68:   }
+69: }
+70: 
+71: function toggleTheme() {
+72:   isDarkMode = !isDarkMode;
+73:   document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+74:   const btn = document.getElementById("themeToggleBtn");
+75:   if (btn) btn.textContent = isDarkMode ? "☀️ Light Mode" : "🌙 Dark Mode";
+76:   saveCurrentState();
+77: }
+78: 
+79: function toggleExamMode() {
+80:   isExamMode = !isExamMode;
+81:   const res = document.getElementById("quizResultsScreen");
+82:   if (res) res.classList.remove("is-active");
+83:   renderApplication();
+84:   window.scrollTo({ top: 0, behavior: "smooth" });
+85: }
+86: 
+87: function resetProgressPrompt() {
+88:   if (confirm("Are you sure you want to reset all progress, bookmarks, and test scores?")) {
+89:     localStorage.removeItem(STORAGE_KEY);
+90:     userPracticeAnswers = {};
+91:     userExamAnswers = {};
+92:     userReviewFlags = new Set();
+93:     userSampleAnswers = {};
+94:     currentQIndex = 0;
+95:     currentViewingMode = "question";
+96:     isExamMode = false;
+97:     const res = document.getElementById("quizResultsScreen");
+98:     if (res) res.classList.remove("is-active");
+99:     renderApplication();
+100:   }
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

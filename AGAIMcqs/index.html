@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applied Generative & Agentic AI Systems (24CAI0305) — ST-2 Masterclass</title>
+
+  <!-- Google Fonts (JavaProgrammingQ Typography System) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Modular Stylesheets (v9.1 Cache Busting) -->
+  <link rel="stylesheet" href="main.css?v=9.1" />
+  <link rel="stylesheet" href="components.css?v=9.1" />
+  <link rel="stylesheet" href="visualizers.css?v=9.1" />
+
+  <style>
+    /* Critical State Handling */
+    .results-container-card {
+      display: none !important;
+    }
+    .results-container-card.is-active {
+      display: block !important;
+    }
+
+    /* Header Brand & ST Switcher Inline Layout */
+    .header-title-group {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 6px !important;
+    }
+
+    .header-title-row {
+      display: inline-flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 16px !important;
+      flex-wrap: wrap !important;
+    }
+
+    .header-brand-wrap {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+    }
+
+    .header-logo-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 32px !important;
+      height: 32px !important;
+      background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important;
+      color: #ffffff !important;
+      font-weight: 850 !important;
+      font-size: 13px !important;
+      letter-spacing: 0.04em !important;
+      border-radius: 9px !important;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35) !important;
+      flex-shrink: 0 !important;
+    }
+
+    .header-title-group h1 {
+      font-size: clamp(22px, 2.2vw, 28px) !important;
+      font-weight: 900 !important;
+      letter-spacing: -0.03em !important;
+      background: linear-gradient(135deg, var(--ink-primary, #181e30) 30%, #2563eb 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      display: inline-block !important;
+      margin: 0 !important;
+      line-height: 1 !important;
+    }
+
+    /* ST1, ST2, ST3 Navigation Switcher */
+    .st-nav-group {
+      display: inline-flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      background: var(--card-sub-bg, #f4f0e6) !important;
+      border: 1px solid var(--border-color, #dcd4c3) !important;
+      padding: 3px 4px !important;
+      border-radius: 999px !important;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07), 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+      gap: 4px !important;
+    }
+
+    .st-nav-btn {
+      background: transparent !important;
+      border: 1px solid transparent !important;
+      color: var(--ink-secondary, #5e667e) !important;
+      font-family: inherit !important;
+      font-size: 12.5px !important;
+      font-weight: 750 !important;
+      letter-spacing: 0.03em !important;
+      padding: 6px 14px !important;
+      border-radius: 999px !important;
+      cursor: pointer !important;
+      transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      user-select: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      white-space: nowrap !important;
+      line-height: 1 !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    .st-indicator {
+      width: 7px !important;
+      height: 7px !important;
+      border-radius: 50% !important;
+      background: var(--ink-muted, #8790a8) !important;
+      opacity: 0.65 !important;
+      display: inline-block !important;
+      transition: all 0.18s ease !important;
+    }
+
+    .st-nav-btn:hover:not(.active) {
+      color: var(--ink-primary, #181e30) !important;
+      background: var(--card-hover, #ede8dc) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .st-nav-btn:hover:not(.active) .st-indicator {
+      background: #2563eb !important;
+      opacity: 1 !important;
+    }
+
+    .st-nav-btn.active {
+      background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #4f46e5 100%) !important;
+      color: #ffffff !important;
+      border-color: transparent !important;
+      box-shadow: 0 3px 12px rgba(37, 99, 235, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+      cursor: default !important;
+    }
+
+    .st-nav-btn.active .st-indicator {
+      background: #34d399 !important;
+      box-shadow: 0 0 8px #34d399 !important;
+      opacity: 1 !important;
+    }
+
+    .st-active-badge {
+      font-size: 9.5px !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      background: rgba(255, 255, 255, 0.25) !important;
+      padding: 2px 7px !important;
+      border-radius: 999px !important;
+      margin-left: 2px !important;
+      line-height: 1.1 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <canvas id="confettiCanvas"></canvas>
+
+  <div class="app-wrapper">
+    <!-- Minimal Header Banner -->
+    <header class="main-header">
+      <div class="header-flex">
+        <div class="header-title-group">
+          <div class="header-title-row">
+            <div class="header-brand-wrap">
+              <h1>AGAI</h1>
+            </div>
+            <div class="st-nav-group" role="tablist" aria-label="Exam Session Selection">
+              <button class="st-nav-btn" id="btnST1" type="button" title="Switch to ST1 Syllabus & Practice">
+                <span class="st-indicator"></span>ST1
+              </button>
+              <button class="st-nav-btn active" id="btnST2" type="button" title="Currently Viewing ST2 Masterclass">
+                <span class="st-indicator"></span>ST2
+              </button>
+              <button class="st-nav-btn" id="btnEndTerm" type="button" title="Switch to End Term (Full Syllabus)">
+                <span class="st-indicator"></span>End Term
+              </button>
+            </div>
+          </div>
+          <p>ST-2 Complete Syllabus Revision &amp; Masterclass (Lectures 24–37)</p>
+        </div>
+        <div class="header-btn-group">
+          <button class="btn-minimal-secondary" id="themeToggleBtn">🌙 Dark Mode</button>
+          <button class="btn-minimal-primary" id="openRoadmapModalBtn">🗺️ Syllabus Roadmap</button>
+          <button class="btn-minimal-secondary" id="toggleExamModeBtn" title="View all questions in continuous exam mode">📝 Exam</button>
+          <button class="btn-minimal-secondary" id="clearAllAnswersBtn"
+            title="Clear all question answers across the quiz">Clear All</button>
+          <button class="btn-minimal-danger" id="resetUserProgressBtn"
+            title="Reset all progress, bookmarks, and scores">Reset</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Top Progress Bar -->
+    <div class="progress-card">
+      <div class="progress-header-row">
+        <span id="labelCurrentQuestionNumber">Question 1 of 80</span>
+        <span>Completed: <strong id="labelProgressPercentage">0%</strong> (<span id="labelAnsweredCount">0</span> / <span id="labelTotalQuestionsCount">80</span>
+          Questions) | Score: <strong id="labelCurrentTotalScore">0</strong> / <span id="labelTotalMarks">107</span> Marks</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-indicator" id="overallProgressBarTrack"></div>
+      </div>
+    </div>
+
+    <!-- Study & Practice Layout -->
+    <div id="quizPracticeArea" class="study-layout">
+      <!-- Left Sidebar: Modules Accordion -->
+      <aside class="sidebar-panel">
+        <div class="sidebar-panel-header">
+          <span class="sidebar-panel-title">Syllabus Navigator</span>
+          <span style="font-size: 11px; color: var(--ink-muted); font-weight:750;">ST-2 Order</span>
+        </div>
+        <div class="sidebar-search-box">
+          <span class="sidebar-search-icon">🔍</span>
+          <input type="text" id="sidebarSearchInput" class="sidebar-search-input"
+            placeholder="Search questions or topics..." />
+        </div>
+        <div id="sidebarAccordionContainer"></div>
+      </aside>
+
+      <!-- Right Main Card -->
+      <main class="content-panel">
+        <div class="study-card-main" id="primaryQuestionCard">
+
+          <!-- VIEW A: MODULE MASTERCLASS GUIDE -->
+          <div class="module-masterclass-view" id="moduleMasterclassViewArea">
+            <div class="mod-guide-header">
+              <h2 id="guideModTitle">Module Title</h2>
+              <span id="guideModLec">Lectures</span>
+            </div>
+
+            <div class="mod-guide-section">
+              <h3>🌟 1. Why are we studying this module? (Real-World Motivation)</h3>
+              <p id="guideModWhyStudy"></p>
+            </div>
+
+            <div class="mod-guide-section">
+              <h3>💡 2. What is it? (Explained from Ground Zero)</h3>
+              <p id="guideModWhatIsIt"></p>
+            </div>
+
+            <div class="mod-guide-section">
+              <h3>🛠️ 3. Real-World Use & Practical Applications</h3>
+              <p id="guideModRealWorld"></p>
+            </div>
+
+            <!-- Architectural Flowchart Visual -->
+            <div class="mod-guide-section" style="border-left-color: #8b5cf6;">
+              <h3>📊 4. Architectural Visual Schematic & Flowchart</h3>
+              <div id="guideModDiagramContainer"></div>
+            </div>
+
+            <!-- Interactive Live Visualizer / Simulator -->
+            <div id="guideModSimContainer"></div>
+
+            <div class="mod-guide-section">
+              <h3>⚙️ 5. Core Technical Concepts & Key Formulas</h3>
+              <ul id="guideModMechanicsList"></ul>
+            </div>
+
+            <div class="mod-guide-section" style="border-left-color: #d97706;">
+              <h3>📐 6. Concrete Numerical Walkthrough & Dimensional Math</h3>
+              <div id="guideModStepExample" style="font-size: 14.5px; line-height: 1.65;"></div>
+            </div>
+
+            <div class="mod-guide-section" style="border-left-color: #16a34a;">
+              <h3>🎯 7. Most Expected Exam Questions & High-Yield Traps</h3>
+              <ul id="guideModExpectedQuestionsList"></ul>
+            </div>
+
+            <div style="margin-top: 20px; display: flex; gap: 12px; justify-content: flex-end;">
+              <button class="btn-action-nav btn-next-action" id="btnStartModuleQuestions">Start Module Questions
+                →</button>
+            </div>
+          </div>
+
+          <!-- VIEW B: QUESTION MODE -->
+          <div class="question-mode-view" id="questionModeViewArea">
+            <!-- Breadcrumb & Badges -->
+            <div class="breadcrumb-container">
+              <span class="tag-badge tag-module" id="badgeModuleNumTitle">Module</span>
+              <span class="tag-badge tag-lecture" id="badgeLectureInfo">Lectures</span>
+              <span class="tag-badge tag-diff-easy" id="badgeDifficultyLevel">Difficulty</span>
+              <span class="tag-badge tag-points" id="badgeMarksPoints">1 Mark</span>
+            </div>
+
+            <!-- Full Topic Title Banner -->
+            <div class="current-topic-banner">
+              <span class="topic-prefix" id="topicModulePrefix">Module 1 • Topic</span>
+              <h2 class="topic-full-title" id="topicMainHeading">Topic Heading</h2>
+            </div>
+
+            <!-- SECTION 1: TOPIC MASTERCLASS (FROM-SCRATCH THEORY) -->
+            <section class="theory-masterclass-card">
+              <div class="theory-card-header" id="theoryCollapseToggleBtn">
+                <h3 class="theory-card-title">
+                  <span>📖 Topic Masterclass (Learn from Ground Zero):</span>
+                </h3>
+                <span class="theory-toggle-hint" id="theoryExpandCollapseHint">▼ Collapse</span>
+              </div>
+
+              <div class="theory-body-wrapper" id="theoryFullContentContainer">
+                <!-- 1. What is it? (Analogy) -->
+                <div class="theory-chunk">
+                  <h4>💡 1. What is this concept? (Beginner Intuition)</h4>
+                  <p id="theoryWhatIsItText"></p>
+                </div>
+
+                <!-- 2. Why do we need it? -->
+                <div class="theory-chunk">
+                  <h4>❓ 2. Why do we need it? (Problem it Solves)</h4>
+                  <p id="theoryWhyWeNeedItText"></p>
+                </div>
+
+                <!-- 3. How it works -->
+                <div class="theory-chunk">
+                  <h4>⚙️ 3. How does it work step-by-step?</h4>
+                  <p id="theoryHowItWorksText"></p>
+                  <div class="formula-display-box" id="theoryFormulaBox"></div>
+                </div>
+
+                <!-- 4. Key Takeaways -->
+                <div class="theory-chunk" style="border-left-color: #10b981;">
+                  <h4>🎯 4. Key Exam Takeaways</h4>
+                  <ul id="theoryTakeawaysList"></ul>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 2: WARM-UP PRACTICE (2-3 SAMPLE QUESTIONS) -->
+            <section class="warmup-card">
+              <h4 class="warmup-card-title">
+                <span>💡 Warm-up Concept Practice (2–3 Sample Questions):</span>
+              </h4>
+              <div id="warmupSamplesContainer"></div>
+            </section>
+
+            <!-- SECTION 3: SIR'S EXAM QUESTION -->
+            <section class="exam-question-card">
+              <div class="exam-header-row">
+                <span class="exam-tag-top">🎯 Sir's Original Revision Question</span>
+                <button class="btn-clear-single-q" id="btnClearCurrentQChoice"
+                  title="Clear your choice for this question">
+                  🧹 Clear Choice
+                </button>
+              </div>
+              <h3 class="exam-q-text" id="examPrimaryQuestionText">Question text loading...</h3>
+              <div class="exam-options-stack" id="examOptionsContainer"></div>
+
+              <!-- Feedback Box -->
+              <div class="exam-feedback-box" id="examResultFeedbackBox"></div>
+            </section>
+
+            <!-- Navigation Buttons -->
+            <div class="bottom-controls-bar">
+              <button class="btn-action-nav" id="btnPrevQuestion">← Previous Question</button>
+              <div style="display: flex; gap: 10px;">
+                <button class="btn-action-nav btn-flag-action" id="btnFlagQuestion">☆ Mark for Review</button>
+              </div>
+              <button class="btn-action-nav btn-next-action" id="btnNextQuestion">Next Question →</button>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <!-- Continuous Full Exam Mode Layout (All 80 Questions in a Row) -->
+    <section id="fullExamModeArea" class="full-exam-container-card" style="display: none;">
+      <div class="exam-mode-top-banner">
+        <div>
+          <h2>📝 Complete Exam Mode (All 80 Questions)</h2>
+          <p>Continuous test format. Click any option to instantly evaluate your choice and view detailed step-by-step solutions.</p>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <button class="btn-minimal-danger" id="btnResetExamMode" title="Reset all exam answers and progress">🔄 Reset Exam</button>
+          <button class="btn-minimal-primary" id="btnExitExamMode">← Back to Practice Mode</button>
+        </div>
+      </div>
+      <div id="fullExamQuestionsStack" class="full-exam-stack"></div>
+    </section>
+
+    <!-- Results Screen -->
+    <section class="results-container-card" id="quizResultsScreen">
+      <h2>🎉 ST-2 Revision Assessment Complete!</h2>
+      <div class="big-score-number" id="resTotalPercent">0%</div>
+      <p id="resEvaluationMessage" style="color: var(--ink-secondary); font-size: 15px; margin-bottom: 18px;"></p>
+
+      <div class="results-grid-stats">
+        <div class="res-stat-cell"><b id="resMarksTotal">0</b><span>Marks Scored (out of 92)</span></div>
+        <div class="res-stat-cell"><b id="resCorrectTotal">0</b><span>Correct Answers</span></div>
+        <div class="res-stat-cell"><b id="resWrongTotal">0</b><span>Incorrect Answers</span></div>
+        <div class="res-stat-cell"><b id="resUnansweredTotal">0</b><span>Unanswered Questions</span></div>
+      </div>
+
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:18px;">
+        <button class="btn-minimal-primary" id="btnReviewAllAnswers">🔍 Review Detailed Answers</button>
+        <button class="btn-minimal-secondary" id="btnReturnToPractice">← Return to Practice Mode</button>
+      </div>
+
+      <div style="margin-top: 28px; text-align: left;" id="resultsDetailedReviewArea">
+        <h3 style="margin-bottom: 14px; color: var(--ink-primary);">Detailed Question-by-Question Analysis</h3>
+        <div id="resultsDetailedList"></div>
+      </div>
+    </section>
+
+    <!-- FULL SYLLABUS ROADMAP MODAL -->
+    <div class="roadmap-modal-overlay" id="syllabusRoadmapModal">
+      <div class="roadmap-dialog">
+        <div class="roadmap-modal-header">
+          <div class="roadmap-header-left">
+            <h2>🗺️ ST-2 Syllabus Visual Roadmap</h2>
+            <p>Chitkara University • 24CAI0305: Applied Generative & Agentic AI Systems (Lectures 24–37)</p>
+          </div>
+          <button class="btn-close-modal" id="btnCloseRoadmapModal" title="Close Roadmap">&times;</button>
+        </div>
+
+        <div class="roadmap-timeline-grid" id="roadmapModulesTimeline"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts (Modular Load Order v9.5 Cache Busting) -->
+  <script src="syllabus.js?v=9.5"></script>
+  <script src="module_guides.js?v=9.5"></script>
+  <script src="quiz_questions.js?v=9.5"></script>
+  <script src="sound_effects.js?v=9.5"></script>
+  <script src="confetti.js?v=9.5"></script>
+  <script src="interactive_visualizers.js?v=9.5"></script>
+  <script src="app.js?v=9.5"></script>
+</body>
+
+</html>

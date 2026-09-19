@@ -1,4 +1,4 @@
-# Numerical Aptitude & Logical Reasoning-I (25UNI0110) — ST-1 Revision Platform
+# Numerical Aptitude & Logical Reasoning-I (25UNI0110) — ST-1 Practise Platform
 
 [![Docker Ready](https://img.shields.io/badge/Docker-Ready-blue.svg?logo=docker)](Dockerfile)
 [![Render Deploy](https://img.shields.io/badge/Deploy-Render-46E3B7.svg?logo=render)](render.yaml)

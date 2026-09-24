@@ -24,7 +24,7 @@ cd /d "c:\Users\Asus\Downloads\CSE AI 5th Sem\NALR\NALR MCQs" && python serve.py
 
 
 
-Features **351 verified questions** extracted directly from official university lecture slide decks, categorized into problem-solving subtabs with step-by-step mathematical explanations, instant evaluation, and a custom multi-topic test generator.
+Features **all ppts verified questions** extracted directly from official university lecture slide decks, categorized into problem-solving subtabs with step-by-step mathematical explanations, instant evaluation, and a custom multi-topic test generator.
 
 ---
 

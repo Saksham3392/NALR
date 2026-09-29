@@ -2625,4 +2625,20 @@
   color: #f87171;
 }
 
+/* ==========================================================================
+   VISUALIZER HARDWARE-ACCELERATION & CONTAINMENT
+   ========================================================================== */
+.sol-vis-container {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  contain: layout style paint;
+}
+
+.sol-vis-container svg {
+  shape-rendering: geometricPrecision;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+
 

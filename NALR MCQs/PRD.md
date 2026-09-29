@@ -19,23 +19,23 @@ Undergraduate engineering students preparing for campus placements, national apt
 
 The platform is structured around the official 3-Term curriculum:
 
-### 2.1 Term 1: Sessional Test 1 (ST-1) — 14 Modules (Active Bank: 422 Questions)
+### 2.1 Term 1: Sessional Test 1 (ST-1) — 14 Modules (Active Bank: 535 Questions)
 | Mod # | Module Name | Syllabus Track | Active Question Types & Subtabs |
 | :---: | :--- | :--- | :--- |
-| **mod1** | **Blood Relation** | Relational Logic | Family Tree (T1), Group Caselets (T2), Pointing & Dialogue (T3) |
-| **mod2** | **Coded Relation** | Symbolic Logic | Pointing (T1), Puzzles (T2), Jumbled (T3), In-Laws (T4), Lineage (T5), Ambiguity (T6), Conditions (T7) |
-| **mod3** | **Direction Sense** | Spatial Geometry | Cardinal Movement (T1), Angles/Shadows (T2), Pyth. Trajectories (T3), Point Networks (T4) |
-| **mod4** | **Analogy** | Semantic & Num Equiv | Word Analogies (T1), Number Patterns (T2), Mixed Semantic Chains (T3) |
-| **mod5** | **Number System** | Number Theory | Unit Digits (T1), Cyclicity Wheels (T2), Factorials/Trailing Zeros (T3), Divisibility (T4) |
-| **mod6** | **H.C.F. & L.C.M.** | Arithmetic Foundations | Prime Factorization (T1), Remainder Models (T2), Synchronization Clocks (T3) |
-| **mod7** | **Average** | Balance Mechanics | Weighted Means (T1), Change in Set (T2), Replacement Invariants (T3) |
-| **mod8** | **Remainder Theorem** | Modular Arithmetic | Euclidean Long Division (T1), Negative Remainders (T2), Factorials/Fermat (T3) |
-| **mod9** | **Ratio & Proportion** | Quantitative Relations | Proportionals (T1), Coin Bags (T2), Mixtures/Dilutions (T3), Income/Expenditure (T4) |
-| **mod10** | **Ages** | Linear Relations | Ratio Shifts (T1), Sum/Difference (T2), Age Products (T3), Multi-Person (T4) |
-| **mod11** | **Partnership** | Commercial Arithmetic | Simple/Compound Capital (T1), Time Inversion (T2), Working Partners (T3) |
-| **mod12** | **Allegation** | Mixture Mechanics | Alligation Cross (T1), Replacement Equations (T2) |
-| **mod13** | **Odd Man Out** | Anomaly Detection | Single Letters (T1), Pairs (T2), Triplets & Letter Sets (T3) |
-| **mod14** | **Syllogism** | Deductive Logic | Direct Deductions (T1), Either-Or Pairs (T2), Multi-Premise Chains (T3) |
+| **mod1** | **Blood Relation** | Relational Logic | Family Tree (T1), Group Caselets (T2), Pointing & Dialogue (T3) — **34 Qs** |
+| **mod2** | **Coded Relation** | Symbolic Logic | Pointing (T1), Puzzles (T2), Jumbled (T3), In-Laws (T4), Lineage (T5), Ambiguity (T6), Conditions (T7) — **40 Qs** |
+| **mod3** | **Direction Sense** | Spatial Geometry | Rotations & Clock Angles (T1), Pythagoras (T2), Relative Position (T3), Shadows (T4) — **38 Qs** |
+| **mod4** | **Analogy** | Semantic & Num Equiv | Word Analogies (T1), Number Patterns (T2), Mixed Semantic Chains (T3) — **50 Qs** |
+| **mod5** | **Number System** | Number Theory | Unit Digits (T1), Factors & Primes (T2), Divisibility (T3), Digit Reversal (T4), Series Sum (T5), Extra Practice (T6) — **77 Qs** |
+| **mod6** | **H.C.F. & L.C.M.** | Arithmetic Foundations | Prime Factorization (T1), Real-World Tracks/Bells (T2), Remainder Models (T3), Product/Ratio (T4), Extra Practice (T5) — **60 Qs** |
+| **mod7** | **Average** | Balance Mechanics | Arithmetic Mean & Shifts (T1), Inclusion/Exclusion (T2), Weighted/Alligation (T3), Cricket (T4), Speed (T5), Demographics (T6), Extra Practice (T7) — **58 Qs** |
+| **mod8** | **Remainder Theorem** | Modular Arithmetic | Basic & Negative Remainder (T1), Composite Expressions (T2), Factorials (T3), Cyclicity (T4), Fermat & Wilson (T5) — **54 Qs** |
+| **mod9** | **Ratio & Proportion** | Quantitative Relations | Proportionals (T1), Coin Bags (T2), Mixtures/Dilutions (T3), Income/Expenditure (T4) — **28 Qs** |
+| **mod10** | **Ages** | Linear Relations | Ratio Shifts (T1), Sum/Difference (T2), Age Products (T3), Multi-Person (T4) — **26 Qs** |
+| **mod11** | **Partnership** | Commercial Arithmetic | Simple/Compound Capital (T1), Time Inversion (T2), Working Partners (T3) — **18 Qs** |
+| **mod12** | **Allegation** | Mixture Mechanics | Alligation Cross (T1), Replacement Equations (T2) — *Visualizer Active* |
+| **mod13** | **Odd Man Out** | Anomaly Detection | Single Letters (T1), Pairs (T2), Triplets & Letter Sets (T3) — **27 Qs** |
+| **mod14** | **Syllogism** | Deductive Logic | Direct Deductions (T1), Either-Or Pairs (T2), Multi-Premise Chains (T3), Hybrid Either-Or (T4) — **25 Qs** |
 
 ### 2.2 Term 2: Sessional Test 2 (ST-2) — 11 Modules
 Covers advanced modules: Percentage, Profit & Loss, Simple & Compound Interest, Time & Work, Pipes & Cisterns, Speed Time & Distance, Trains, Boats & Streams, Clocks, Calendars, Permutations & Combinations.
@@ -88,6 +88,20 @@ Every question solution renders a bespoke, responsive vector diagram:
 - **Dedicated Revision Milestone**: Automatically reserves the final day for comprehensive revision and full mock simulation when $D \ge 3$.
 - **Interactive Checklist & Instant Practice Jump**: Students track daily task completion with checkboxes ($X / Y$ tasks completed) and can click "Practice →" to immediately jump into that topic and sub-tab.
 - **State Persistence & Re-configurability**: Stored in `localStorage` (`nalr_study_plan_v1`) so clicking "Planner" directly shows their daily schedule, with a "Reset Planner" action to reconfigure at any time.
+
+### 3.6 Fluid Layout Transitions & Navigation
+- **Liquid Sliding Pill**: Shared floating indicator that dynamically tracks and translates across Term switchers with smooth interpolation and font/resize listeners.
+- **Staggered Cascade Question Transitions**: iOS-style sequential entry animation (banner at 0ms, question body at 40ms, options floating up between 70ms-160ms) on each question navigation.
+- **Zero-Jank CSS Grid Accordions**: Drawer transitions for solutions and notes using CSS Grid `grid-template-rows: 0fr -> 1fr`, eliminating max-height layout jitter.
+
+### 3.7 Dynamic Cursor Spotlight & Smooth Theme Transition
+- **Specular Glow Border Follow**: Dynamic radial gradient border (`--mouse-x`, `--mouse-y`) that follows the mouse across questions and study cards with RAF batching.
+- **Smooth Circular Ripple Theme Transition**: Smooth theme toggle utilizing the View Transitions API and circular clip-path expanding outward from the toggle button coordinates.
+
+### 3.8 GPU Hardware Acceleration & Micro-DOM Virtualization
+- **Decoupled Background Compositor**: Fixed background gradient rendered on an isolated `body::before` plane with `transform: translateZ(0)` and `will-change: transform`.
+- **Micro-DOM Virtualization**: `content-visibility: auto` and `contain-intrinsic-size` applied to long question rows and planner days.
+- **RAF Event Batching**: Throttled pointer and scroll listeners operating on requestAnimationFrame cycles.
 
 ---
 

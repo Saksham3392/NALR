@@ -1,0 +1,11 @@
+.git
+.gitignore
+.env
+.venv
+__pycache__
+*.pyc
+scratch/
+*.log
+*.pdf
+.DS_Store
+Thumbs.db

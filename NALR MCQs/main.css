@@ -142,6 +142,13 @@
   --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
 }
 
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -150,14 +157,30 @@
 
 body {
   font-family: var(--font-sans);
-  background: var(--bg-gradient);
-  background-attachment: fixed;
   color: var(--ink-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   min-height: 100vh;
-  transition: background 0.35s ease, color 0.3s ease;
+}
+
+/* GPU Hardware-Accelerated Fixed Background Plane (Eliminates Scroll Repaint) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-gradient);
+  background-color: var(--bg);
+  z-index: -99999;
+  pointer-events: none;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 button {

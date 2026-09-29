@@ -17,10 +17,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Modular Stylesheets (v10.2 Extra Q Subtabs Added for Mod 5, 6, 7) -->
-  <link rel="stylesheet" href="main.css?v=10.2" />
-  <link rel="stylesheet" href="components.css?v=10.2" />
-  <link rel="stylesheet" href="visualizers.css?v=10.2" />
+  <!-- Modular Stylesheets (v11.0 Pure Performance & Hardware Acceleration) -->
+  <link rel="stylesheet" href="main.css?v=11.0" />
+  <link rel="stylesheet" href="components.css?v=11.0" />
+  <link rel="stylesheet" href="visualizers.css?v=11.0" />
 
   <style>
     /* Critical State Handling */
@@ -206,6 +206,7 @@
           <h1>NALR</h1>
           <!-- 3-Term Switcher Capsule (ST1, ST2, End Term) -->
           <div class="term-selector-capsule" id="termSelectorCapsule" role="tablist" aria-label="Course Examination Term Switcher">
+            <div class="term-sliding-pill" id="termSlidingPill" aria-hidden="true"></div>
             <button type="button" class="term-pill-btn active" data-term="st1" id="termBtn_st1" role="tab" aria-selected="true" title="Switch to ST-1 Syllabus (14 Topics)">
               <span class="term-dot"></span>
               <span class="term-text">ST1</span>
@@ -222,7 +223,7 @@
         </div>
         <div class="header-btn-group">
           <button class="btn-minimal-secondary btn-flagged-trigger" id="btnToggleFlaggedHeader" title="Filter bookmarked questions">★ Flagged (<span id="headerFlaggedCount">0</span>)</button>
-          <button class="btn-minimal-secondary" id="themeToggleBtn">🌙 Dark Mode</button>
+          <button class="btn-minimal-secondary" id="themeToggleBtn">🌙 Dark</button>
           <button class="btn-minimal-secondary" id="toggleExamModeBtn" title="View all questions in continuous exam mode">📝 Exam</button>
           <button class="btn-minimal-secondary" id="btnOpenPlannerModal" onclick="openPlannerModal()" title="Open Personalized Study Planner">📅 Planner</button>
           <button class="btn-minimal-secondary" id="clearAllAnswersBtn"
@@ -548,8 +549,8 @@
   <script src="quiz_questions.js?v=10.2"></script>
   <script src="sound_effects.js?v=10.2"></script>
   <script src="confetti.js?v=10.2"></script>
-  <script src="interactive_visualizers.js?v=10.2"></script>
-  <script src="app.js?v=10.2"></script>
+  <script src="interactive_visualizers.js?v=11.0"></script>
+  <script src="app.js?v=11.0"></script>
 </body>
 
 </html>

@@ -144,3 +144,57 @@ When extending or maintaining the Study Planner subsystem:
 3. **Interactive Navigation**:
    - All generated daily tasks must support instant click-to-practice routing (`jumpToPlannerTopic()`) that syncs term, module, and subtab.
 
+---
+
+## 7. Hardware Acceleration & Compositor Invariants
+
+When extending CSS, DOM layouts, or event listeners:
+1. **Zero-Repaint Fixed Background Plane**:
+   - **Never** use `background-attachment: fixed` on `body` (triggers full-page layout repaints on scroll).
+   - Always decouple background patterns onto a fixed pseudo-element layer:
+     ```css
+     body::before {
+       content: "";
+       position: fixed;
+       inset: 0;
+       z-index: -1;
+       transform: translateZ(0);
+       will-change: transform;
+     }
+     ```
+2. **Event Loop Throttling via `requestAnimationFrame`**:
+   - **Never** perform direct DOM writes or property setters inside unthrottled `pointermove` or `scroll` listeners.
+   - Always batch updates using `requestAnimationFrame` loops and declare `{ passive: true }`.
+3. **Layer Promotion & Layout Containment**:
+   - Isolate self-contained visualizer containers and cards with `contain: layout style paint;` and promote them to the compositor layer with `transform: translateZ(0); backface-visibility: hidden;`.
+4. **Micro-DOM Virtualization**:
+   - Use `content-visibility: auto` with appropriate `contain-intrinsic-size` for heavy repeating lists (e.g., exam results, planner timeline cards) to skip off-screen rendering.
+
+---
+
+## 8. Fluid Transitions & Micro-Interactions Standards
+
+1. **Liquid Pill Navigation**:
+   - Tab/pill indicators must animate via `transform: translateX(...)` and dynamic `width` using GPU-accelerated bezier curves (`cubic-bezier(0.2, 0.9, 0.3, 1)`).
+   - Never animate `left` or `width` through layout-thrashing properties.
+2. **Zero-Jank CSS Grid Accordions**:
+   - Drawers and collapsibles must animate using CSS Grid:
+     ```css
+     .drawer {
+       display: grid;
+       grid-template-rows: 0fr;
+       transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+     }
+     .drawer.expanded {
+       grid-template-rows: 1fr;
+     }
+     .drawer-content {
+       min-height: 0;
+       overflow: hidden;
+     }
+     ```
+   - Avoid legacy `max-height` estimation hacks.
+3. **Sequential Staggered Cascade**:
+   - On question navigation, apply sequential entry delays (`slideDown` at 0ms, `fadeIn` at 40ms, `floatUp` on options at 70ms, 100ms, 130ms, 160ms) to provide a fluid native iOS-style experience.
+
+

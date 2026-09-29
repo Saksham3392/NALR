@@ -114,9 +114,29 @@ function createStudyPlan(examDateStr, selectedModuleIds) {
   };
 }
 
+function formatLocalYMD(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
 // Test cases
+const todayForTest = new Date();
+const in5Days = new Date(todayForTest);
+in5Days.setDate(todayForTest.getDate() + 5);
+const in5DaysStr = formatLocalYMD(in5Days);
+
+const tomorrow = new Date(todayForTest);
+tomorrow.setDate(todayForTest.getDate() + 1);
+const tomorrowStr = formatLocalYMD(tomorrow);
+
+const yesterday = new Date(todayForTest);
+yesterday.setDate(todayForTest.getDate() - 1);
+const yesterdayStr = formatLocalYMD(yesterday);
+
 console.log('--- Test 1: 5 days with 3 modules ---');
-const plan1 = createStudyPlan('2026-10-04', ['mod1', 'mod2', 'mod3']);
+const plan1 = createStudyPlan(in5DaysStr, ['mod1', 'mod2', 'mod3']);
 console.log('Total Days:', plan1.totalDays, 'Tasks:', plan1.totalTasks, 'Days created:', plan1.days.length);
 plan1.days.forEach(d => {
   console.log(`Day ${d.dayIndex} (${d.displayDate}) [${d.isRevisionDay ? 'REVISION' : d.tasks.length + ' tasks'}]:`);
@@ -125,10 +145,10 @@ plan1.days.forEach(d => {
 
 console.log('\n--- Test 2: 1 day (tomorrow) with all ST-1 modules ---');
 const st1Ids = (SYLLABUS_DATA.st1?.modules || []).map(m => m.id);
-const plan2 = createStudyPlan('2026-09-30', st1Ids);
+const plan2 = createStudyPlan(tomorrowStr, st1Ids);
 console.log('Total Days:', plan2.totalDays, 'Tasks:', plan2.totalTasks, 'Days created:', plan2.days.length);
 console.log(`Day 1 tasks: ${plan2.days[0].tasks.length}`);
 
 console.log('\n--- Test 3: Past date validation ---');
-const plan3 = createStudyPlan('2026-09-28', ['mod1']);
+const plan3 = createStudyPlan(yesterdayStr, ['mod1']);
 console.log('Past date result:', plan3.error);

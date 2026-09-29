@@ -44,16 +44,16 @@ The scripts MUST load sequentially in `index.html` to satisfy dependencies:
 
 ```html
 <!-- Modular Load Order (Critical Dependency Order) -->
-<script src="syllabus.js?v=9.7"></script>
-<script src="quiz_questions.js?v=9.7"></script>
-<script src="sound_effects.js?v=9.7"></script>
-<script src="confetti.js?v=9.7"></script>
-<script src="interactive_visualizers.js?v=9.7"></script>
-<script src="app.js?v=9.7"></script>
+<script src="syllabus.js?v=11.0"></script>
+<script src="quiz_questions.js?v=11.0"></script>
+<script src="sound_effects.js?v=11.0"></script>
+<script src="confetti.js?v=11.0"></script>
+<script src="interactive_visualizers.js?v=11.0"></script>
+<script src="app.js?v=11.0"></script>
 ```
 
 1. **`syllabus.js`**: Declares global `SYLLABUS_DATA` and `SYLLABUS_MODULES`. Defines all terms (ST1, ST2, EndTerm) and subtab types.
-2. **`quiz_questions.js`**: Declares global `QUIZ_QUESTIONS` array (422+ questions across ST1).
+2. **`quiz_questions.js`**: Declares global `QUIZ_QUESTIONS` array (535 verified questions across ST1).
 3. **`sound_effects.js`**: Instantiates synthetic Web Audio API tone oscillators for correct chime (`800Hz $\rightarrow$ 1200Hz`) and incorrect buzz (`220Hz $\rightarrow$ 180Hz`). Zero external MP3/WAV files required.
 4. **`confetti.js`**: Manages the `<canvas id="confettiCanvas">` particle physics engine for score celebrations.
 5. **`interactive_visualizers.js`**: Exposes the `SolutionVisualizer` namespace containing custom rendering algorithms for all 14 syllabus topics.
@@ -177,4 +177,98 @@ To prevent vertical overflow when expanding syllabus accordion sections (ST-1, S
 2. **Fixed Header (`.planner-setup-fixed-head`)**: Contains the modal header and 'Target Exam Date' card with `flex-shrink: 0`, keeping them permanently pinned at the top.
 3. **Scrollable Body (`.planner-scrollable-body`)**: Wraps the middle accordion section with `flex: 1 1 0` and `overflow-y: auto`, isolating all scrolling exclusively to the syllabus tree.
 4. **Sticky Footer (`.planner-footer`)**: Located outside the scrollable body with `flex-shrink: 0`, a solid background (`var(--card-bg)`), and a top border, permanently visible at the modal bottom.
+
+---
+
+## 7. Fluid Layout Transitions & Navigation Pipeline
+
+### 7.1 Liquid Sliding Pill Indicator
+The term switcher (`#termSelectorGroup`) utilizes a hardware-accelerated shared floating background indicator pill (`#termSlidingPill`):
+- Instead of abrupt class swaps, `updateTermSelectorButtonsUI()` measures the active tab button's `offsetLeft` and `offsetWidth`.
+- The pill translates via `transform: translateX(${offsetLeft}px)` and dynamic `width: ${offsetWidth}px` using `cubic-bezier(0.2, 0.9, 0.3, 1)`.
+- Re-synced on window `resize` and `document.fonts.ready` events to maintain pixel-perfect alignment across display zooms.
+
+### 7.2 Staggered Cascade Question Transitions
+When moving between questions, UI components enter via micro-staggered CSS animations:
+- Question Banner: `slideDown` (0ms delay)
+- Question Body: `fadeIn` (40ms delay)
+- Options A through D: `floatUp` (staggered sequentially at 70ms, 100ms, 130ms, 160ms)
+- Provides native iOS-feel responsiveness without runtime JavaScript animation loops.
+
+### 7.3 Zero-Jank CSS Grid Accordions
+Solution and theory drawers animate utilizing modern CSS Grid layout:
+```css
+.exam-feedback-box {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.exam-feedback-box.expanded {
+  grid-template-rows: 1fr;
+}
+.exam-feedback-box-content {
+  overflow: hidden;
+  min-height: 0;
+}
+```
+This avoids legacy `max-height` estimation hacks, delivering jank-free 60 FPS transitions.
+
+---
+
+## 8. Dynamic Cursor Spotlight & Smooth Theme Engine
+
+### 8.1 Specular Cursor Spotlight
+- A global `pointermove` listener captures cursor coordinates `(clientX, clientY)`.
+- Updates CSS custom properties `--mouse-x` and `--mouse-y` on cards (`.exam-question-card`, `.study-card-main`, `.tab-question-item`).
+- High-efficiency rendering using CSS mask composition:
+  ```css
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  ```
+- Throttled via `requestAnimationFrame` to eliminate main-thread stuttering during fast cursor movement.
+
+### 8.2 Smooth Circular Ripple Theme Transition
+- The theme toggle invokes `applyThemeChange(newTheme, clickX, clickY)`.
+- If supported, invokes the browser `document.startViewTransition()`.
+- Dynamically generates a expanding circular mask clip-path:
+  ```javascript
+  document.documentElement.animate({
+    clipPath: [
+      `circle(0px at ${x}px ${y}px)`,
+      `circle(${maxRadius}px at ${x}px ${y}px)`
+    ]
+  }, {
+    duration: 480,
+    easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+    pseudoElement: "::view-transition-new(root)"
+  });
+  ```
+- Degrades gracefully with radial clip-path mask on non-supporting browsers.
+
+---
+
+## 9. GPU Hardware Acceleration & Compositor Virtualization
+
+To ensure smooth 60+ FPS performance even on low-powered mobile devices or large high-refresh monitors:
+1. **Decoupled Fixed Background Plane**:
+   - Replaced `background-attachment: fixed` on `body` (which triggers full-page layout repaints on scroll) with a dedicated pseudo-element:
+   ```css
+   body::before {
+     content: "";
+     position: fixed;
+     inset: 0;
+     z-index: -1;
+     transform: translateZ(0);
+     will-change: transform;
+   }
+   ```
+2. **GPU Layer Promotion**:
+   - Promoted key cards, SVGs, and sliding pills to independent compositor layers via `transform: translateZ(0)` and `backface-visibility: hidden`.
+3. **Layout & Paint Containment**:
+   - Applied `contain: layout style paint` to self-contained components (`.sol-vis-container`, `.planner-day-card`, `.exam-question-card`).
+4. **DOM Virtualization via `content-visibility: auto`**:
+   - Applied `content-visibility: auto` with `contain-intrinsic-size` to long list rows (e.g. `.results-detail-row`, `.planner-day-card`), skipping off-screen layout and paint until scrolled into viewport.
+5. **Event Loop Throttling**:
+   - `pointermove` and `scroll` event listeners are RAF-batched (`requestAnimationFrame`) with passive flag `{ passive: true }`.
+
 

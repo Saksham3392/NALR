@@ -23,29 +23,29 @@ cd /d "c:\Users\Asus\Downloads\CSE AI 5th Sem\NALR\NALR MCQs" && python serve.py
 
 ---
 
-Features **475 verified questions** extracted directly from official university lecture slide decks, categorized into problem-solving subtabs with step-by-step mathematical explanations, interactive diagrammatic visualizers, in-browser presentation viewing, and a custom multi-topic examination generator.
+Features **535 verified questions** extracted directly from official university lecture slide decks, categorized into problem-solving subtabs with step-by-step mathematical explanations, interactive diagrammatic visualizers, in-browser presentation viewing, and a custom multi-topic examination generator.
 
 ---
 
-## 📖 ST-1 Syllabus Modules (475 Questions Database)
+## 📖 ST-1 Syllabus Modules (535 Questions Database)
 
 |   #    | Topic | Status | Questions Loaded | Problem-Solving Subtabs |
 | :----: | :--- | :---: | :---: | :--- |
 | **1**  | **Blood Relation** | ✅ Active | **34 Qs** | Family Tree (12 Qs), Group Caselets (7 Qs), Pointing & Dialogue (15 Qs) |
 | **2**  | **Coded Relation** | ✅ Active | **40 Qs** | Pointing/Dialogue (6 Qs), Family Tree (6 Qs), Jumbled (6 Qs), In-Laws (6 Qs), Lineage (5 Qs), Gender Traps (6 Qs), Conditions (5 Qs) |
 | **3**  | **Analogy** | ✅ Active | **50 Qs** | Word & GK (28 Qs), Number Sets (15 Qs), Letter & Alphabet (7 Qs) |
-| **4**  | **Direction Sense** | ✅ Active | **38 Qs** | Basic Cardinal (10 Qs), Shadow (8 Qs), Turn Angles (10 Qs), Pythagoras (10 Qs) |
-| **5**  | **Number System** | ✅ Active | **57 Qs** | Unit Digits & Trailing Zeros (5 Qs), Factors & Primes (10 Qs), Divisibility Rules (25 Qs), Digit Reversal (6 Qs), Series Summation (11 Qs) |
-| **6**  | **H.C.F. & L.C.M.** | ✅ Active | **40 Qs** | Prime Factorization (5 Qs), Real-World Track/Bell Applications (7 Qs), Remainder Divisibility Models (16 Qs), Product & Ratio Properties (12 Qs) |
-| **7**  | **Average** | ✅ Active | **38 Qs** | Arithmetic Mean & Shifts (7 Qs), Inclusion/Exclusion/Replacement (7 Qs), Weighted Means & Alligation (8 Qs), Cricket Batting/Bowling (3 Qs), Average Speed & Distance (6 Qs), Hostel Mess & Demographics (7 Qs) |
+| **4**  | **Direction Sense** | ✅ Active | **38 Qs** | Rotations & Clock Angles (10 Qs), Pythagoras Displacement (11 Qs), Relative Position (14 Qs), Shadow Scenarios (3 Qs) |
+| **5**  | **Number System** | ✅ Active | **77 Qs** | Unit Digits & Trailing Zeros (5 Qs), Factors & Primes (10 Qs), Divisibility Rules (25 Qs), Digit Reversal (6 Qs), Series Summation (11 Qs), Extra Practice (20 Qs) |
+| **6**  | **H.C.F. & L.C.M.** | ✅ Active | **60 Qs** | Prime Factorization (5 Qs), Real-World Track/Bell Applications (7 Qs), Remainder Divisibility Models (16 Qs), Product & Ratio Properties (12 Qs), Extra Practice (20 Qs) |
+| **7**  | **Average** | ✅ Active | **58 Qs** | Arithmetic Mean & Shifts (7 Qs), Inclusion/Exclusion/Replacement (7 Qs), Weighted Means & Alligation (8 Qs), Cricket Batting/Bowling (3 Qs), Average Speed & Distance (6 Qs), Hostel Mess & Demographics (7 Qs), Extra Practice (20 Qs) |
 | **8**  | **Remainder Theorem** | ✅ Active | **54 Qs** | Basic & Negative Remainder (8 Qs), Composite Expressions & Cancellation (11 Qs), Factorials & Last Two Digits (6 Qs), Power Forms & Cyclicity (15 Qs), Fermat, Wilson & Polynomials (14 Qs) |
 | **9**  | **Ratio & Proportion** | ✅ Active | **28 Qs** | Proportionals & Formulations (6 Qs), Currency Bags & Partitions (6 Qs), Mixture Dilutions & Alloys (9 Qs), Shifts, Incomes & Rates (7 Qs) |
 | **10** | **Ages** | ✅ Active | **26 Qs** | Ratio & Temporal Shifts (10 Qs), Sum/Difference Invariants (7 Qs), Product-Based Problems (4 Qs), Multi-Person Systems (5 Qs) |
 | **11** | **Partnership** | ✅ Active | **18 Qs** | Simple & Compound Investments (6 Qs), Variable Time & Inversion (7 Qs), Working Partners & Deductions (5 Qs) |
 | **12** | **Allegation** | ✅ Active | _Active in Visualizers_ | Rule of Alligation Cross & Mean Concentration Balance |
 | **13** | **Odd Man Out** | ✅ Active | **27 Qs** | Single Letter (2 Qs), Letter Pairs (7 Qs), Triplets & Letter Sets (18 Qs) |
-| **14** | **Syllogism** | ✅ Active | **25 Qs** | Two-Statement Direct Deductions (6 Qs), Complementary Either-Or Pairs (6 Qs), Multi-Statement Chains (10 Qs) |
-|        | **Total Database Pool** | | **475 Questions** | **37 Problem Types Fully Verified** |
+| **14** | **Syllogism** | ✅ Active | **25 Qs** | Direct Deductions (6 Qs), Complementary Either-Or Pairs (6 Qs), Multi-Premise Chains (10 Qs), Hybrid Either-Or (3 Qs) |
+|        | **Total Database Pool** | | **535 Questions** | **44 Problem Types Fully Verified** |
 
 ---
 
@@ -72,7 +72,26 @@ Features **475 verified questions** extracted directly from official university 
   - Opens in a new tab to an in-browser document viewer with page scrubber, page thumbnails pane, full text search, print, zoom, and fullscreen support.
   - Direct download button for original `.pptx` presentation files.
 
-- **3-Term Switcher Capsule**: Switch between **ST-1** (14 Modules, 475 questions), **ST-2** (11 Modules), and **End Term** (14 Modules) at any time.
+- **3-Term Switcher Capsule**: Switch between **ST-1** (14 Modules, 535 questions), **ST-2** (11 Modules), and **End Term** (14 Modules) at any time.
+
+- **Dynamic Cursor Spotlight (Glow Border Follow)**:
+  - Interactive specular radial gradient border (`--mouse-x`, `--mouse-y`) that follows the student's cursor across question cards and planner views.
+  - Mimics modern macOS / Raycast / Linear aesthetics with an iridescent subtle sheen and automatic dark mode adaptation.
+
+- **Smooth Circular Ripple Theme Transition**:
+  - Silky theme toggle using the modern View Transitions API with expanding radial clip-path circle (`circle(0% at clickX clickY) -> circle(150% at clickX clickY)`).
+  - The new light or dark theme spreads organically across the screen from the click origin with zero visual flicker.
+
+- **Fluid Layout Transitions & Navigation**:
+  - **Liquid Sliding Pill**: Dynamic floating pill indicator that glides and stretches smoothly between Term switcher tabs (ST-1 ↔ ST-2 ↔ End Term) with automatic window resize and font load tracking.
+  - **Staggered Cascade Question Transitions**: Native iOS-style entry animations on question change (banner slides down at 0ms, question body fades in at 40ms, options float up sequentially at 70ms, 100ms, 130ms, 160ms).
+  - **Zero-Jank CSS Grid Accordions**: Smooth solution and explanation drawers powered by `grid-template-rows: 0fr -> 1fr` rather than jerky max-height hacks.
+
+- **GPU Hardware Acceleration & Micro-DOM Virtualization**:
+  - Zero-repaint fixed background plane (`body::before` with `transform: translateZ(0)` and `will-change: transform`), eliminating full-page GPU repaints during scrolling.
+  - Hardware compositor promotion (`contain: layout style paint`, `transform: translateZ(0)`, `backface-visibility: hidden`) across all SVG diagrams and interactive cards.
+  - High-performance micro-virtualization using `content-visibility: auto` and `contain-intrinsic-size` on question cards, planner days, and exam result lists.
+  - Event batching via `requestAnimationFrame` for pointermove and scroll listeners for locked 60+ FPS interaction.
 
 - **One-Click `[ 📋 Copy ]` & `[ ✦ Gemini ]` Buttons**:
   - Copy formatted questions straight to clipboard.

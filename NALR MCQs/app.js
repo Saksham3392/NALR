@@ -407,13 +407,37 @@ function saveCurrentState() {
   }
 }
 
-// Synchronize Capsule UI Buttons
+// Synchronize Capsule UI Buttons with Liquid Sliding Pill
 function updateTermSelectorButtonsUI() {
   const termButtons = document.querySelectorAll(".term-pill-btn");
+  const capsule = document.getElementById("termSelectorCapsule");
+  let pill = document.getElementById("termSlidingPill");
+
+  if (capsule && !pill) {
+    pill = document.createElement("div");
+    pill.className = "term-sliding-pill";
+    pill.id = "termSlidingPill";
+    pill.setAttribute("aria-hidden", "true");
+    capsule.insertBefore(pill, capsule.firstChild);
+  }
+
   termButtons.forEach((btn) => {
     const isThisTerm = (btn.dataset.term === currentTermId);
     btn.classList.toggle("active", isThisTerm);
     btn.setAttribute("aria-selected", isThisTerm ? "true" : "false");
+  });
+
+  // Calculate exact position and width for liquid sliding animation
+  requestAnimationFrame(() => {
+    const activeBtn = capsule ? capsule.querySelector(".term-pill-btn.active") : null;
+    if (activeBtn && capsule && pill) {
+      const capsuleRect = capsule.getBoundingClientRect();
+      const btnRect = activeBtn.getBoundingClientRect();
+      const offsetLeft = btnRect.left - capsuleRect.left;
+      pill.style.transform = `translateX(${offsetLeft}px)`;
+      pill.style.width = `${btnRect.width}px`;
+      pill.style.opacity = "1";
+    }
   });
 }
 
@@ -492,13 +516,79 @@ function switchTerm(termId) {
 // SECTION 4: THEME ENGINE, CLIPBOARD UTILITIES & TOAST NOTIFICATIONS
 // =============================================================================
 
-// Theme Toggle (Dark / Light Mode)
-function toggleTheme() {
-  isDarkMode = !isDarkMode;
+// Theme Toggle (Dark / Light) with Smooth Circular Ripple Wave
+let isThemeTransitioning = false;
+
+function applyThemeChange(newDarkState) {
+  isDarkMode = newDarkState;
   document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
   const btn = document.getElementById("themeToggleBtn");
-  if (btn) btn.textContent = isDarkMode ? "☀️ Light Mode" : "🌙 Dark Mode";
+  if (btn) btn.textContent = isDarkMode ? "☀️ Light" : "🌙 Dark";
   saveCurrentState();
+}
+
+function toggleTheme(event) {
+  if (isThemeTransitioning) return;
+  const targetDarkMode = !isDarkMode;
+
+  // Fallback if View Transitions API is unsupported or user prefers reduced motion
+  if (!document.startViewTransition || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    applyThemeChange(targetDarkMode);
+    return;
+  }
+
+  isThemeTransitioning = true;
+  document.documentElement.classList.add("is-theme-switching");
+
+  const btn = document.getElementById("themeToggleBtn");
+
+  // Determine click / origin coordinates (defaults to button center if keyboard-triggered)
+  let x = window.innerWidth - 100;
+  let y = 40;
+  if (event && typeof event.clientX === "number" && (event.clientX !== 0 || event.clientY !== 0)) {
+    x = event.clientX;
+    y = event.clientY;
+  } else if (btn) {
+    const rect = btn.getBoundingClientRect();
+    x = rect.left + rect.width / 2;
+    y = rect.top + rect.height / 2;
+  }
+
+  // Calculate distance to the farthest viewport corner + cushion to completely clear screen corners
+  const endRadius = Math.ceil(Math.hypot(
+    Math.max(x, window.innerWidth - x),
+    Math.max(y, window.innerHeight - y)
+  )) + 25;
+
+  const cleanup = () => {
+    isThemeTransitioning = false;
+    document.documentElement.classList.remove("is-theme-switching");
+  };
+
+  const transition = document.startViewTransition(() => {
+    applyThemeChange(targetDarkMode);
+  });
+
+  transition.ready.then(() => {
+    const animation = document.documentElement.animate(
+      {
+        clipPath: [
+          `circle(0px at ${x}px ${y}px)`,
+          `circle(${endRadius}px at ${x}px ${y}px)`
+        ]
+      },
+      {
+        duration: 650,
+        easing: "cubic-bezier(0.25, 1, 0.35, 1)",
+        pseudoElement: "::view-transition-new(root)"
+      }
+    );
+    animation.addEventListener("finish", cleanup);
+  }).catch(cleanup);
+
+  if (transition.finished) {
+    transition.finished.finally(cleanup);
+  }
 }
 
 // =============================================================================
@@ -665,6 +755,14 @@ function closePlannerModal() {
   if (modal) modal.style.display = "none";
 }
 
+// Helper: format Date object as local YYYY-MM-DD (prevents UTC timezone shifts)
+function formatDateToYMD(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
 // Render Setup Form (Date Picker & Topic Selection per Term)
 function renderPlannerSetupView() {
   const setupView = document.getElementById("plannerSetupView");
@@ -677,13 +775,13 @@ function renderPlannerSetupView() {
   if (dateInput) {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
-    const tomorrowStr = tomorrow.toISOString().split("T")[0];
+    const tomorrowStr = formatDateToYMD(tomorrow);
     dateInput.min = tomorrowStr;
 
     if (!dateInput.value || dateInput.value < tomorrowStr) {
       const defaultExam = new Date();
       defaultExam.setDate(defaultExam.getDate() + 7);
-      dateInput.value = defaultExam.toISOString().split("T")[0];
+      dateInput.value = formatDateToYMD(defaultExam);
     }
   }
 
@@ -848,7 +946,7 @@ function generateDailyStudyPlan() {
 
     days.push({
       dayIndex: i + 1,
-      dateString: dayDate.toISOString().split("T")[0],
+      dateString: formatDateToYMD(dayDate),
       displayDate: dayDate.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }),
       isRevisionDay: false,
       isBufferDay: false,
@@ -862,7 +960,7 @@ function generateDailyStudyPlan() {
     dayDate.setDate(today.getDate() + i + 1);
     days.push({
       dayIndex: i + 1,
-      dateString: dayDate.toISOString().split("T")[0],
+      dateString: formatDateToYMD(dayDate),
       displayDate: dayDate.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }),
       isRevisionDay: false,
       isBufferDay: true,
@@ -876,7 +974,7 @@ function generateDailyStudyPlan() {
     revDate.setDate(today.getDate() + totalDays);
     days.push({
       dayIndex: totalDays,
-      dateString: revDate.toISOString().split("T")[0],
+      dateString: formatDateToYMD(revDate),
       displayDate: revDate.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }),
       isRevisionDay: true,
       isBufferDay: false,
@@ -1718,10 +1816,12 @@ function renderMainQuestionView() {
       const feedbackBox = document.createElement("div");
       feedbackBox.className = `exam-feedback-box is-shown ${isCorrect ? 'is-good' : 'is-bad'}`;
       feedbackBox.innerHTML = `
-        <div class="feedback-headline">
-          ${isCorrect ? '✅ Correct Answer!' : '❌ Incorrect Choice!'} — <span class="sol-correct-pill">Option ${correctLetter}: ${escapeHtml(q.correct)}</span>
+        <div class="exam-feedback-box-content">
+          <div class="feedback-headline">
+            ${isCorrect ? '✅ Correct Answer!' : '❌ Incorrect Choice!'} — <span class="sol-correct-pill">Option ${correctLetter}: ${escapeHtml(q.correct)}</span>
+          </div>
+          ${formatDetailedSolution(q.explanation || '', q)}
         </div>
-        ${formatDetailedSolution(q.explanation || '', q)}
       `;
       qCard.appendChild(feedbackBox);
     }
@@ -1911,10 +2011,12 @@ function renderFullExamQuestions() {
       const correctIdx = (q.options || []).indexOf(q.correct);
       const correctLetter = (correctIdx !== -1) ? letters[correctIdx] : q.correct;
       fb.innerHTML = `
-        <div class="feedback-headline">
-          ${isCorrect ? '✅ Correct Answer!' : '❌ Incorrect Choice!'} — <span class="sol-correct-pill">Option ${correctLetter}: ${escapeHtml(q.correct)}</span>
+        <div class="exam-feedback-box-content">
+          <div class="feedback-headline">
+            ${isCorrect ? '✅ Correct Answer!' : '❌ Incorrect Choice!'} — <span class="sol-correct-pill">Option ${correctLetter}: ${escapeHtml(q.correct)}</span>
+          </div>
+          ${formatDetailedSolution(q.explanation || '', q)}
         </div>
-        ${formatDetailedSolution(q.explanation || '', q)}
       `;
       card.appendChild(fb);
     }
@@ -1999,6 +2101,7 @@ function showResultsScreen() {
       const userChoice = answers[q.id];
       const isCor = (userChoice === q.correct);
       const row = document.createElement("div");
+      row.className = "results-detail-row";
       row.style.cssText = "padding:12px; margin-bottom:8px; border-radius:8px; background:var(--card-sub-bg); border-left:4px solid " +
         (userChoice === undefined ? "var(--ink-muted)" : (isCor ? "var(--emerald-green)" : "var(--crimson-red)"));
       row.innerHTML = `
@@ -2064,6 +2167,28 @@ function setupEventListeners() {
 
   const themeBtn = document.getElementById("themeToggleBtn");
   if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
+
+  // Dynamic Cursor Spotlight for Cards (Iridescent Specular Glow - Hardware-Accelerated RAF)
+  let spotlightRaf = null;
+  let lastPointerEvt = null;
+
+  document.addEventListener("pointermove", (e) => {
+    lastPointerEvt = e;
+    if (!spotlightRaf) {
+      spotlightRaf = requestAnimationFrame(() => {
+        spotlightRaf = null;
+        if (!lastPointerEvt) return;
+        const target = lastPointerEvt.target;
+        if (!target) return;
+        const card = target.closest(".study-card-main, .exam-question-card, .tab-question-item");
+        if (card) {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty("--mouse-x", `${lastPointerEvt.clientX - rect.left}px`);
+          card.style.setProperty("--mouse-y", `${lastPointerEvt.clientY - rect.top}px`);
+        }
+      });
+    }
+  }, { passive: true });
 
   const examBtn = document.getElementById("toggleExamModeBtn");
   if (examBtn) examBtn.addEventListener("click", toggleExamMode);
@@ -2236,16 +2361,35 @@ function setupEventListeners() {
     }
   });
 
-  // Compact Sticky Progress Bar on Scroll
+  // Compact Sticky Progress Bar on Scroll (Hardware-Accelerated RAF Debounce)
+  let scrollRaf = null;
+  let isCompactState = false;
+  const progressCardEl = document.querySelector(".progress-card");
+
   window.addEventListener("scroll", () => {
-    const card = document.querySelector(".progress-card");
-    if (!card) return;
-    if (window.scrollY > 40) {
-      card.classList.add("is-compact");
-    } else {
-      card.classList.remove("is-compact");
+    if (!scrollRaf) {
+      scrollRaf = requestAnimationFrame(() => {
+        scrollRaf = null;
+        if (!progressCardEl) return;
+        const shouldBeCompact = window.scrollY > 40;
+        if (shouldBeCompact !== isCompactState) {
+          isCompactState = shouldBeCompact;
+          progressCardEl.classList.toggle("is-compact", shouldBeCompact);
+        }
+      });
     }
   }, { passive: true });
+
+  // Window resize & font load sync for Liquid Sliding Pill
+  window.addEventListener("resize", () => {
+    updateTermSelectorButtonsUI();
+  }, { passive: true });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => {
+      updateTermSelectorButtonsUI();
+    });
+  }
 }
 
 // Global Initialization with Guard (Guarantees single execution and prevents duplicate event listeners)
@@ -2260,7 +2404,7 @@ function initApp() {
     if (isDarkMode) {
       document.documentElement.setAttribute("data-theme", "dark");
       const btn = document.getElementById("themeToggleBtn");
-      if (btn) btn.textContent = "☀️ Light Mode";
+      if (btn) btn.textContent = "☀️ Light";
     }
     setupEventListeners();
     renderApplication();

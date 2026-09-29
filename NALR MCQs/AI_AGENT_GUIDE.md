@@ -17,21 +17,21 @@ The platform is a zero-build, pure vanilla web application:
 
 ## 2. Complete Roster of Terms & Modules
 
-### 📘 Term 1: ST-1 (14 Modules, 422 Questions Active)
+### 📘 Term 1: ST-1 (14 Modules, 535 Questions Active)
 | Module ID | Module Title | Current Status | Total Questions |
 |:---:|:---|:---:|:---:|
 | `mod1` | Blood Relation | ✅ Active | 34 Questions |
 | `mod2` | Coded Relation | ✅ Active | 40 Questions |
 | `mod3` | Analogy | ✅ Active | 50 Questions |
 | `mod4` | Direction | ✅ Active | 38 Questions |
-| `mod5` | Number System | ✅ Active | 57 Questions |
-| `mod6` | H.C.F. & L.C.M. | ✅ Active | 40 Questions |
-| `mod7` | Average | ✅ Active | 38 Questions |
+| `mod5` | Number System | ✅ Active | 77 Questions |
+| `mod6` | H.C.F. & L.C.M. | ✅ Active | 60 Questions |
+| `mod7` | Average | ✅ Active | 58 Questions |
 | `mod8` | Remainder Theorem | ✅ Active | 54 Questions |
 | `mod9` | Ratio & Proportion | ✅ Active | 28 Questions |
-| `mod10` | Ages | ⏳ Upload Pending | 0 Questions |
+| `mod10` | Ages | ✅ Active | 26 Questions |
 | `mod11` | Partnership | ✅ Active | 18 Questions |
-| `mod12` | Allegation | ⏳ Upload Pending | 0 Questions |
+| `mod12` | Allegation | _Active in Visualizers_ | 0 Questions |
 | `mod13` | Odd Man Out | ✅ Active | 27 Questions |
 | `mod14` | Syllogism | ✅ Active | 25 Questions |
 

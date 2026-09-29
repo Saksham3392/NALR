@@ -46,10 +46,10 @@ if (appJs.includes('window.openPlannerModal = openPlannerModal')) {
 }
 
 // 6. Verify cache version bump
-if (html.includes('app.js?v=10.2') && html.includes('components.css?v=10.2')) {
-  console.log("✓ Cache-busting version bumped to v=10.2.");
+if (/app\.js\?v=(10\.[2-9]|11\.[0-9])/.test(html) && /components\.css\?v=(10\.[2-9]|11\.[0-9])/.test(html)) {
+  console.log("✓ Cache-busting version bumped to v=10.2+.");
 } else {
-  console.error("❌ Version not bumped to v=10.2!");
+  console.error("❌ Version not bumped to v=10.2+!");
   process.exit(1);
 }
 

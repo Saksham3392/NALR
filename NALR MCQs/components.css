@@ -19,6 +19,8 @@
   position: relative;
   overflow: hidden;
   transition: var(--transition-smooth);
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .main-header::before {
@@ -59,6 +61,7 @@
    1.1 Term Selector Capsule Switcher (ST1, ST2, End Term)
    -------------------------------------------------------------------------- */
 .term-selector-capsule {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 3px;
@@ -77,11 +80,31 @@
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
+/* Liquid Sliding Pill for Term Switcher */
+.term-sliding-pill {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #4361ee 0%, #3b82f6 100%);
+  box-shadow: 0 2px 10px rgba(67, 97, 238, 0.45);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              width 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 0.2s ease;
+  will-change: transform, width;
+}
+
 .term-pill-btn {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: transparent;
+  background: transparent !important;
   border: none;
   color: var(--ink-secondary, #64748b);
   font-family: 'Space Grotesk', 'Manrope', sans-serif;
@@ -91,20 +114,21 @@
   border-radius: 999px;
   cursor: pointer;
   outline: none;
-  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
   white-space: nowrap;
   -webkit-appearance: none;
   appearance: none;
+  box-shadow: none !important;
+  transition: color 0.22s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .term-pill-btn:hover:not(.active) {
   color: var(--ink-primary, #181e30);
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.04) !important;
 }
 
 [data-theme="dark"] .term-pill-btn:hover:not(.active) {
   color: #f1f5f9;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08) !important;
 }
 
 .term-pill-btn .term-dot {
@@ -118,9 +142,7 @@
 }
 
 .term-pill-btn.active {
-  background: linear-gradient(135deg, #4361ee 0%, #3b82f6 100%);
   color: #ffffff !important;
-  box-shadow: 0 2px 10px rgba(67, 97, 238, 0.45);
   transform: scale(1.02);
 }
 
@@ -235,6 +257,9 @@
   box-shadow: var(--glass-specular);
   width: 100%;
   transition: padding 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: padding, box-shadow;
 }
 
 /* Compact Shrink on Scroll */
@@ -306,16 +331,18 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -60%;
+  left: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
   animation: shimmerPass 2.4s infinite;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 @keyframes shimmerPass {
-  0% { left: -60%; }
-  50%, 100% { left: 130%; }
+  0% { transform: translateX(-120%); }
+  50%, 100% { transform: translateX(250%); }
 }
 
 @keyframes progressGlow {
@@ -368,22 +395,6 @@
   display: flex;
   align-items: center;
   gap: 5px;
-}
-
-.sidebar-panel-title::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--primary-blue);
-  box-shadow: 0 0 6px var(--primary-blue);
-  animation: pulseDot 2s infinite;
-}
-
-@keyframes pulseDot {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.3); opacity: 0.7; }
 }
 
 /* Accordion Module Cards */
@@ -1280,32 +1291,42 @@
   30%, 60%, 90% { transform: translateX(5px); }
 }
 
-/* Feedback Box (Smooth Accordion Unfold) */
+/* Feedback Box (Smooth Zero-Jank Accordion Unfold via CSS Grid) */
 .exam-feedback-box {
   margin-top: 20px;
   border-radius: var(--radius-md);
-  padding: 16px 20px;
-  display: none;
   line-height: 1.65;
   font-size: 14.5px;
   box-shadow: var(--shadow-md);
-  transform-origin: top center;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+  overflow: hidden;
 }
 
 .exam-feedback-box.is-shown {
-  display: block;
-  animation: feedbackAccordionUnfold 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  grid-template-rows: 1fr;
 }
 
-@keyframes feedbackAccordionUnfold {
-  0% {
-    opacity: 0;
-    transform: translateY(-8px) scaleY(0.94);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scaleY(1);
-  }
+.exam-feedback-box-content {
+  min-height: 0;
+  overflow: hidden;
+  padding: 16px 20px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1) 0.08s,
+              transform 0.32s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
+}
+
+.exam-feedback-box.is-shown .exam-feedback-box-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exam-feedback-box:not(:has(.exam-feedback-box-content)) {
+  padding: 16px 20px;
 }
 
 .exam-feedback-box.is-good {
@@ -2242,6 +2263,7 @@
 }
 
 .tab-question-item {
+  position: relative;
   scroll-margin-top: 105px;
   border: 1px solid var(--glass-border-subtle);
   border-radius: 18px;
@@ -3878,6 +3900,354 @@
     margin-right: -18px !important;
   }
 }
+
+/* ==========================================================================
+   VIEW TRANSITIONS API — Circular Ripple Theme Wave
+   ========================================================================== */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  display: block;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 99999;
+}
+
+/* Prevent element transitions from stuttering during View Transition snapshot */
+html.is-theme-switching *,
+html.is-theme-switching *::before,
+html.is-theme-switching *::after {
+  transition: none !important;
+}
+
+/* Fallback smooth cross-fade for browsers without View Transitions */
+html:not(.is-theme-switching) body,
+html:not(.is-theme-switching) .main-header,
+html:not(.is-theme-switching) .study-card-main,
+html:not(.is-theme-switching) .exam-question-card,
+html:not(.is-theme-switching) .tab-question-item,
+html:not(.is-theme-switching) .sidebar-panel,
+html:not(.is-theme-switching) .progress-card {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   DYNAMIC CURSOR SPOTLIGHT (Iridescent Specular Border Glow - macOS/Raycast)
+   ========================================================================== */
+.study-card-main,
+.exam-question-card,
+.tab-question-item {
+  position: relative;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Offscreen Virtualization & Layout Containment for Exam Mode */
+.exam-question-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 340px;
+  contain: layout style paint;
+}
+
+/* Iridescent Specular Border Glow via Mask Composite */
+.study-card-main::before,
+.exam-question-card::before,
+.tab-question-item::before {
+  content: "";
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: radial-gradient(
+    420px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(56, 189, 248, 0.75) 0%,
+    rgba(37, 99, 235, 0.5) 25%,
+    rgba(139, 92, 246, 0.35) 50%,
+    transparent 80%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: opacity;
+}
+
+[data-theme="dark"] .study-card-main::before,
+[data-theme="dark"] .exam-question-card::before,
+[data-theme="dark"] .tab-question-item::before {
+  background: radial-gradient(
+    480px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(56, 189, 248, 0.9) 0%,
+    rgba(99, 102, 241, 0.7) 25%,
+    rgba(168, 85, 247, 0.45) 50%,
+    transparent 80%
+  );
+}
+
+.study-card-main:hover::before,
+.exam-question-card:hover::before,
+.tab-question-item:hover::before {
+  opacity: 1;
+}
+
+/* Soft Ambient Inner Sheen */
+.study-card-main::after,
+.exam-question-card::after,
+.tab-question-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    520px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(37, 99, 235, 0.04) 0%,
+    rgba(139, 92, 246, 0.02) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 0;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: opacity;
+}
+
+[data-theme="dark"] .study-card-main::after,
+[data-theme="dark"] .exam-question-card::after,
+[data-theme="dark"] .tab-question-item::after {
+  background: radial-gradient(
+    520px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(96, 165, 250, 0.06) 0%,
+    rgba(167, 139, 250, 0.03) 40%,
+    transparent 70%
+  );
+}
+
+.study-card-main:hover::after,
+.exam-question-card:hover::after,
+.tab-question-item:hover::after {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   STAGGERED CASCADE QUESTION TRANSITIONS (Native iOS Feel)
+   ========================================================================== */
+@keyframes cascadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cascadeFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cascadeFloatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 1. Question Banner: 0ms */
+.current-topic-banner,
+.tab-q-header-bar,
+.exam-header-row {
+  animation: cascadeSlideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0ms;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+/* 2. Question Text: 40ms */
+.tab-q-text,
+.exam-q-text {
+  animation: cascadeFadeIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 40ms;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+/* 3. Options Float-In Sequentially: 70ms, 100ms, 130ms, 160ms... */
+.tab-q-options-stack .exam-opt-btn,
+.exam-options-stack .exam-opt-btn {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.tab-q-options-stack .exam-opt-btn:nth-child(1),
+.exam-options-stack .exam-opt-btn:nth-child(1) {
+  animation: cascadeFloatUp 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 70ms;
+}
+
+.tab-q-options-stack .exam-opt-btn:nth-child(2),
+.exam-options-stack .exam-opt-btn:nth-child(2) {
+  animation: cascadeFloatUp 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 100ms;
+}
+
+.tab-q-options-stack .exam-opt-btn:nth-child(3),
+.exam-options-stack .exam-opt-btn:nth-child(3) {
+  animation: cascadeFloatUp 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 130ms;
+}
+
+.tab-q-options-stack .exam-opt-btn:nth-child(4),
+.exam-options-stack .exam-opt-btn:nth-child(4) {
+  animation: cascadeFloatUp 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 160ms;
+}
+
+.tab-q-options-stack .exam-opt-btn:nth-child(n+5),
+.exam-options-stack .exam-opt-btn:nth-child(n+5) {
+  animation: cascadeFloatUp 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 190ms;
+}
+
+/* Subtab Switcher (Module Types) Smooth Pill & Accent Transitions */
+.sidebar-type-btn {
+  position: relative;
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+.type-tab-btn {
+  position: relative;
+  transition: all 0.24s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.type-tab-btn:hover {
+  transform: translateY(-2px);
+}
+
+.type-tab-btn.active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .current-topic-banner,
+  .tab-q-header-bar,
+  .exam-header-row,
+  .tab-q-text,
+  .exam-q-text,
+  .tab-q-options-stack .exam-opt-btn,
+  .exam-options-stack .exam-opt-btn {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   HARDWARE-ACCELERATION & COMPOSITOR OPTIMIZATIONS
+   ========================================================================== */
+
+/* 1. Global GPU Layer Promotion for Interactive & Animated Elements */
+.btn-minimal-primary,
+.btn-minimal-secondary,
+.btn-minimal-danger,
+.opt-btn,
+.exam-opt-btn,
+.term-pill-btn,
+.sidebar-type-btn,
+.type-tab-btn,
+.module-nav-btn,
+.q-nav-btn,
+.toast-notification,
+.exam-floating-status {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* 2. Modals & Glass Overlays Hardware Compositing */
+.exam-topic-backdrop {
+  transform: translateZ(0);
+  will-change: opacity;
+}
+
+.exam-topic-dialog,
+.planner-dialog {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+/* 3. Smooth Zero-Jank Accordion Hardware Promotion */
+.exam-feedback-box {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* 4. Offscreen List Virtualization & Layout Containment (60/120 FPS on long lists) */
+.planner-day-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 160px;
+  contain: layout style paint;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.results-detail-row {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 68px;
+  contain: layout style paint;
+}
+
+.sidebar-panel {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.q-nav-grid {
+  contain: content;
+}
+
+/* 5. Smooth Touch/Wheel Scrolling & Containment for Overflow Containers */
+.planner-timeline-container,
+.planner-scrollable-body,
+.sidebar-modules-list,
+.sidebar-types-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  contain: content;
+}
+
+
 
 
 

@@ -7,6 +7,8 @@
 
 A high-performance, interactive MCQ practice and examination simulation platform built for Chitkara University's **Numerical Aptitude & Logical Reasoning-I (25UNI0110)** ST-1 exams.
 
+
+
 ---
 
 ### 🌐 Live Interactive Demo
@@ -28,25 +30,25 @@ Features **all ppts verified questions** extracted directly from official univer
 
 ---
 
-## 📖 14 ST-1 Syllabus Modules
+## 📖 ST-1 Syllabus Modules (475 Questions Database)
 
-| # | Topic | Status | Questions Loaded | Problem-Solving Subtabs |
-|:---:|:---|:---:|:---:|:---|
-| **1** | **Blood Relation** | ✅ Active | **34 Qs** | Family Tree (12 Qs), Group Caselets (7 Qs), Pointing & Dialogue (15 Qs) |
-| **2** | **Coded Relation** | ✅ Active | **40 Qs** | Pointing/Dialogue (6 Qs), Family Tree (6 Qs), Jumbled (6 Qs), In-Laws (6 Qs), Lineage (5 Qs), Gender Traps (6 Qs), Conditions (5 Qs) |
-| **3** | **Analogy** | ✅ Active | **50 Qs** | Word & GK (28 Qs), Number Sets (15 Qs), Letter & Alphabet (7 Qs) |
-| **4** | **Direction** | ✅ Active | **38 Qs** | Basic Cardinal (10 Qs), Shadow (8 Qs), Turn Angles (10 Qs), Pythagoras (10 Qs) |
-| **5** | **Number System** | ✅ Active | **57 Qs** | Unit Digits & Trailing Zeros (5 Qs), Factors & Primes (10 Qs), Divisibility Rules (25 Qs), Digit Reversal (6 Qs), Series Summation (11 Qs) |
-| **6** | **H.C.F. & L.C.M.** | ✅ Active | **40 Qs** | Basic Calculations (5 Qs), Real-World Track/Bell Applications (7 Qs), Remainder Divisibility Models (16 Qs), Product & Ratio Properties (12 Qs) |
-| **7** | **Average** | ✅ Active | **38 Qs** | Arithmetic Mean & Shifts (7 Qs), Inclusion/Exclusion/Replacement (7 Qs), Weighted Means & Alligation (8 Qs), Cricket Batting/Bowling (3 Qs), Average Speed & Distance (6 Qs), Hostel Mess & Demographics (7 Qs) |
-| **8** | **Remainder Theorem** | ✅ Active | **54 Qs** | Basic & Negative Remainder (8 Qs), Composite Expressions & Cancellation (11 Qs), Factorials & Last Two Digits (6 Qs), Power Forms & Cyclicity (15 Qs), Fermat, Wilson & Polynomials (14 Qs) |
-| **9** | **Ratio & Proportion** | ⏳ Framework Ready | *Pending* | Pre-configured in syllabus architecture |
-| **10** | **Ages** | ⏳ Framework Ready | *Pending* | Pre-configured in syllabus architecture |
-| **11** | **Partnership** | ⏳ Framework Ready | *Pending* | Pre-configured in syllabus architecture |
-| **12** | **Allegation** | ⏳ Framework Ready | *Pending* | Pre-configured in syllabus architecture |
-| **13** | **Odd Man Out** | ⏳ Framework Ready | *Pending* | Pre-configured in syllabus architecture |
-| **14** | **Syllogism** | ⏳ Framework Ready | *Pending* | Pre-configured in syllabus architecture |
-| | **Total Database Pool** | | **351 Questions** | **37 Problem Types Fully Verified** |
+|   #    | Topic | Status | Questions Loaded | Problem-Solving Subtabs |
+| :----: | :--- | :---: | :---: | :--- |
+| **1**  | **Blood Relation** | ✅ Active | **34 Qs** | Family Tree (12 Qs), Group Caselets (7 Qs), Pointing & Dialogue (15 Qs) |
+| **2**  | **Coded Relation** | ✅ Active | **40 Qs** | Pointing/Dialogue (6 Qs), Family Tree (6 Qs), Jumbled (6 Qs), In-Laws (6 Qs), Lineage (5 Qs), Gender Traps (6 Qs), Conditions (5 Qs) |
+| **3**  | **Analogy** | ✅ Active | **50 Qs** | Word & GK (28 Qs), Number Sets (15 Qs), Letter & Alphabet (7 Qs) |
+| **4**  | **Direction Sense** | ✅ Active | **38 Qs** | Basic Cardinal (10 Qs), Shadow (8 Qs), Turn Angles (10 Qs), Pythagoras (10 Qs) |
+| **5**  | **Number System** | ✅ Active | **57 Qs** | Unit Digits & Trailing Zeros (5 Qs), Factors & Primes (10 Qs), Divisibility Rules (25 Qs), Digit Reversal (6 Qs), Series Summation (11 Qs) |
+| **6**  | **H.C.F. & L.C.M.** | ✅ Active | **40 Qs** | Prime Factorization (5 Qs), Real-World Track/Bell Applications (7 Qs), Remainder Divisibility Models (16 Qs), Product & Ratio Properties (12 Qs) |
+| **7**  | **Average** | ✅ Active | **38 Qs** | Arithmetic Mean & Shifts (7 Qs), Inclusion/Exclusion/Replacement (7 Qs), Weighted Means & Alligation (8 Qs), Cricket Batting/Bowling (3 Qs), Average Speed & Distance (6 Qs), Hostel Mess & Demographics (7 Qs) |
+| **8**  | **Remainder Theorem** | ✅ Active | **54 Qs** | Basic & Negative Remainder (8 Qs), Composite Expressions & Cancellation (11 Qs), Factorials & Last Two Digits (6 Qs), Power Forms & Cyclicity (15 Qs), Fermat, Wilson & Polynomials (14 Qs) |
+| **9**  | **Ratio & Proportion** | ✅ Active | **28 Qs** | Proportionals & Formulations (6 Qs), Currency Bags & Partitions (6 Qs), Mixture Dilutions & Alloys (9 Qs), Shifts, Incomes & Rates (7 Qs) |
+| **10** | **Ages** | ✅ Active | **26 Qs** | Ratio & Temporal Shifts (10 Qs), Sum/Difference Invariants (7 Qs), Product-Based Problems (4 Qs), Multi-Person Systems (5 Qs) |
+| **11** | **Partnership** | ✅ Active | **18 Qs** | Simple & Compound Investments (6 Qs), Variable Time & Inversion (7 Qs), Working Partners & Deductions (5 Qs) |
+| **12** | **Allegation** | ✅ Active | _Active in Visualizers_ | Rule of Alligation Cross & Mean Concentration Balance |
+| **13** | **Odd Man Out** | ✅ Active | **27 Qs** | Single Letter (2 Qs), Letter Pairs (7 Qs), Triplets & Letter Sets (18 Qs) |
+| **14** | **Syllogism** | ✅ Active | **25 Qs** | Two-Statement Direct Deductions (6 Qs), Complementary Either-Or Pairs (6 Qs), Multi-Statement Chains (10 Qs) |
+|        | **Total Database Pool** | | **475 Questions** | **37 Problem Types Fully Verified** |
 
 ---
 
@@ -62,84 +64,6 @@ Features **all ppts verified questions** extracted directly from official univer
 
 ---
 
-## 🚀 Running Locally
-
-### Option 1: Using Python (Recommended)
-```bash
-# Clone or navigate to the project directory
-python serve.py
-```
-Open [http://localhost:3030](http://localhost:3030) in your browser.
-
-### Option 2: Using Docker
-```bash
-# Build and run the lightweight Nginx container
-docker compose up -d
-```
-Open [http://localhost:3030](http://localhost:3030) in your browser.
-
-To stop the container:
-```bash
-docker compose down
-```
-
-### Option 3: Direct Browser Launch
-Simply double-click `index.html` in your file explorer to open the application in any modern web browser.
-
----
-
-## 🌐 Deploying to Render
-
-You can deploy this project to [Render](https://render.com) using either of two methods:
-
-### Method 1: Render Static Site (Recommended — 100% Free & Fast)
-1. Push your code to a GitHub repository (see [GitHub Upload Guide](#-github-upload-guide) below).
-2. Log in to [Render Dashboard](https://dashboard.render.com).
-3. Click **New +** → **Static Site**.
-4. Connect your GitHub repository.
-5. Set the settings:
-   - **Name**: `nalr-mcqs-revision`
-   - **Branch**: `main`
-   - **Build Command**: *(leave empty)*
-   - **Publish Directory**: `.` *(current directory)*
-6. Click **Create Static Site**. Your site will be live on an `onrender.com` URL within seconds!
-
-### Method 2: Render Docker Web Service
-1. In Render Dashboard, click **New +** → **Web Service**.
-2. Connect your repository.
-3. Select **Docker** as the runtime environment.
-4. Render will automatically detect the provided [Dockerfile](Dockerfile) and [render.yaml](render.yaml).
-5. The container dynamically binds to Render's `$PORT` environment variable via Nginx configuration templates.
-6. Click **Create Web Service**.
-
----
-
-## 📤 GitHub Upload Guide
-
-Follow these steps to push the project to your GitHub account:
-
-```bash
-# 1. Initialize git (if not already done)
-git init
-
-# 2. Stage all project files
-git add .
-
-# 3. Commit your changes
-git commit -m "Initial commit: NALR ST-1 MCQ Revision Platform with 351 questions"
-
-# 4. Rename main branch
-git branch -M main
-
-# 5. Add your GitHub remote repository (replace with your repo URL)
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-
-# 6. Push to GitHub
-git push -u origin main
-```
-
----
-
 ## 📁 Repository Structure
 
 ```
@@ -147,18 +71,27 @@ git push -u origin main
 ├── docker-compose.yml          # Local container orchestration (Port 3030)
 ├── nginx.conf                  # Nginx template with Gzip compression and $PORT support
 ├── render.yaml                 # Infrastructure-as-code for Render deployment
-├── .dockerignore               # Optimizes Docker build context (excludes logs, pdfs, pycache)
+├── .dockerignore               # Optimizes Docker build context
 ├── .gitignore                  # Standard Git ignore rules
 ├── index.html                  # Main responsive UI layout & exam topic modal
+├── presentation_viewer.html    # Standalone in-browser presentation document viewer
 ├── app.js                      # Core state management, practice & custom exam engine
 ├── syllabus.js                 # 14 module definitions with subtab problem types
-├── quiz_questions.js           # 351 verified questions with solutions
+├── quiz_questions.js           # 475 verified questions with solutions
 ├── sound_effects.js            # Web Audio API procedural sound feedback
 ├── confetti.js                 # Milestone celebration effects
-├── interactive_visualizers.js  # Dynamic formula & diagram visualizers
+├── interactive_visualizers.js  # 14 dynamic formula & diagram visualizers
+├── ppt_manifest.js             # Presentation metadata & page counts
 ├── components.css              # Cards, modal dialogs, buttons & responsive grids
 ├── main.css                    # Base theme variables, typography & layout resets
-├── app.css                     # Main styling bundle
+├── visualizers.css             # Diagram styling for all 14 visualizers
+├── PRD.md                      # Product Requirements Document
+├── AGENTS.md                   # AI Coding Assistant Operational Guide
+├── DESIGN_SYSTEM.md            # Design System & Component Guidelines
+├── ARCHITECTURE.md             # System Architecture & Data Flow
+├── PPTs/                       # Source presentations, slide images & vector PDFs
+│   ├── slides/                 # Pre-rendered 1280x720 slide image sets
+│   └── pdf/                    # Pre-exported vector PDF presentations
 ├── serve.py                    # Lightweight Python HTTP server for local testing
 └── README.md                   # Complete documentation
 ```

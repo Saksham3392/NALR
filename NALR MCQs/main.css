@@ -1,0 +1,326 @@
+/* ==========================================================================
+   AGAI ST-2 MASTERCLASS — DESIGN SYSTEM (JavaProgrammingQ Color Theme)
+   ========================================================================== */
+
+:root {
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", "DM Mono", Consolas, "Courier New", monospace;
+
+  /* Warm Editorial Light Theme (Apple Warm Parchment & Champagne Craft) */
+  --bg: #f7f4ed;
+  --bg-gradient: radial-gradient(circle at 10% 12%, rgba(254, 240, 215, 0.65) 0%, transparent 45%),
+                 radial-gradient(circle at 90% 14%, rgba(248, 233, 208, 0.6) 0%, transparent 42%),
+                 radial-gradient(circle at 50% 85%, rgba(243, 234, 218, 0.55) 0%, transparent 55%),
+                 #f7f4ed;
+  --card-bg: #fffdfa;
+  --card-sub-bg: #f3ede2;
+  --card-hover: #eae2d3;
+  --card-glass: rgba(255, 253, 250, 0.94);
+  --keycap-bg: linear-gradient(180deg, #ffffff 0%, #ede5d5 100%);
+  --keycap-border: rgba(180, 160, 130, 0.28);
+  --keycap-shadow: 0 2px 0 0 rgba(140, 120, 90, 0.12), 0 3px 6px rgba(140, 120, 90, 0.05), inset 0 1px 0 #ffffff;
+  
+  --ink-primary: #1f1b18;
+  --ink-secondary: #5c554e;
+  --ink-muted: #8a8278;
+  --border-color: #dcd1be;
+  --border-subtle: #eae0cf;
+  --border-glow: rgba(37, 99, 235, 0.25);
+  
+  --primary-blue: #2563eb;
+  --primary-blue-hover: #1d4ed8;
+  --primary-blue-bg: #eff6ff;
+  --primary-blue-border: #bfdbfe;
+  --primary-gradient: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #4f46e5 100%);
+  
+  --emerald-green: #15803d;
+  --emerald-green-bg: rgba(21, 128, 61, 0.1);
+  --emerald-green-border: rgba(21, 128, 61, 0.28);
+  --emerald-green-text: #14532d;
+  --emerald-gradient: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  
+  --crimson-red: #b91c1c;
+  --crimson-red-bg: rgba(185, 28, 28, 0.1);
+  --crimson-red-border: rgba(185, 28, 28, 0.28);
+  --crimson-red-text: #7f1d1d;
+  --crimson-gradient: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  
+  --amber-gold: #b45309;
+  --amber-gold-bg: rgba(180, 83, 9, 0.1);
+  --amber-gold-border: rgba(180, 83, 9, 0.28);
+  --amber-gold-text: #78350f;
+  --amber-gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+  
+  --purple-accent: #7c3aed;
+  --purple-accent-bg: #faf5ff;
+  --purple-accent-border: #e9d5ff;
+  --purple-gradient: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+
+  /* Apple Minimalist Glass System */
+  --glass-bg: rgba(254, 251, 246, 0.85);
+  --glass-sub-bg: rgba(246, 240, 230, 0.8);
+  --glass-card: rgba(255, 253, 250, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-border-subtle: rgba(220, 210, 190, 0.5);
+  --specular-rim: inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+  --glass-specular: var(--specular-rim), 0 10px 30px 0 rgba(40, 30, 20, 0.04);
+  --glass-blur: blur(24px) saturate(190%);
+  --glass-blur-sm: blur(14px) saturate(170%);
+
+  /* Shadows & Depth */
+  --shadow-sm: 0 1px 3px rgba(40, 30, 20, 0.04), 0 1px 2px rgba(40, 30, 20, 0.02);
+  --shadow-md: 0 4px 16px -2px rgba(40, 30, 20, 0.06), 0 2px 6px -1px rgba(40, 30, 20, 0.03);
+  --shadow-lg: 0 16px 32px -4px rgba(40, 30, 20, 0.08), 0 6px 12px -2px rgba(40, 30, 20, 0.03);
+  --shadow-glow-blue: 0 0 20px rgba(37, 99, 235, 0.25);
+  --shadow-glow-green: 0 0 20px rgba(21, 128, 61, 0.25);
+  --shadow-glow-purple: 0 0 20px rgba(124, 58, 237, 0.25);
+  --shadow-glass: 0 8px 32px 0 rgba(40, 30, 20, 0.05);
+  
+  --radius-xl: 20px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --radius-xs: 5px;
+  
+  /* Emil Kowalski & Apple Motion System Tokens */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);        /* Strong, responsive ease-out for UI */
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);    /* Smooth on-screen morphing/movement */
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);     /* iOS-style sheet/drawer spring curve */
+  --ease-liquid: cubic-bezier(0.2, 0.9, 0.3, 1);     /* Liquid pill & sliding tab curve */
+  --ease-spring: cubic-bezier(0.34, 1.25, 0.64, 1);  /* Subtly bounded tactile spring */
+  
+  --duration-micro: 110ms;
+  --duration-fast: 160ms;
+  --duration-normal: 220ms;
+  --duration-enter: 240ms;
+  --duration-exit: 160ms;
+
+  --transition-fast: transform var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out);
+  --transition-smooth: transform var(--duration-normal) var(--ease-out), opacity var(--duration-normal) var(--ease-out);
+  --transition-bounce: transform var(--duration-normal) var(--ease-spring), opacity var(--duration-normal) var(--ease-out);
+}
+
+/* Deep Obsidian / Indigo Theme (Linear Precision Canvas & Apple Dark Glass) */
+[data-theme="dark"] {
+  --bg: #07090e;
+  --bg-gradient: radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.12) 0%, transparent 48%),
+                 radial-gradient(circle at 85% 20%, rgba(124, 58, 237, 0.10) 0%, transparent 45%),
+                 radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+                 #07090e;
+  --card-bg: #0e1422;
+  --card-sub-bg: #141c2e;
+  --card-hover: #1a253c;
+  --card-glass: rgba(14, 20, 34, 0.88);
+  --keycap-bg: linear-gradient(180deg, #1e2840 0%, #121929 100%);
+  --keycap-border: rgba(255, 255, 255, 0.12);
+  --keycap-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  
+  --ink-primary: #f8fafc;
+  --ink-secondary: #94a3b8;
+  --ink-muted: #64748b;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-glow: rgba(59, 130, 246, 0.35);
+  
+  --primary-blue: #3b82f6;
+  --primary-blue-hover: #2563eb;
+  --primary-blue-bg: rgba(59, 130, 246, 0.16);
+  --primary-blue-border: rgba(59, 130, 246, 0.35);
+  --primary-gradient: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+  
+  --emerald-green: #3ecf8e;
+  --emerald-green-bg: rgba(62, 207, 142, 0.14);
+  --emerald-green-border: rgba(62, 207, 142, 0.35);
+  --emerald-green-text: #6ee7b7;
+  
+  --crimson-red: #f87171;
+  --crimson-red-bg: rgba(248, 113, 113, 0.14);
+  --crimson-red-border: rgba(248, 113, 113, 0.35);
+  --crimson-red-text: #fca5a5;
+  
+  --amber-gold: #fbbf24;
+  --amber-gold-bg: rgba(251, 191, 36, 0.14);
+  --amber-gold-border: rgba(251, 191, 36, 0.35);
+  --amber-gold-text: #fde68a;
+
+  --purple-accent: #a78bfa;
+  --purple-accent-bg: rgba(167, 139, 250, 0.14);
+  --purple-accent-border: rgba(167, 139, 250, 0.35);
+
+  /* Apple Minimalist Glass Dark */
+  --glass-bg: rgba(14, 20, 34, 0.78);
+  --glass-sub-bg: rgba(20, 28, 46, 0.7);
+  --glass-card: rgba(14, 20, 34, 0.86);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-subtle: rgba(255, 255, 255, 0.05);
+  --specular-rim: inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  --glass-specular: var(--specular-rim), 0 12px 34px 0 rgba(0, 0, 0, 0.5);
+  --glass-blur: blur(24px) saturate(190%);
+  --glass-blur-sm: blur(14px) saturate(170%);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px -2px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 32px -4px rgba(0, 0, 0, 0.55);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01", "ss03";
+  scroll-behavior: smooth;
+}
+
+/* Tabular Numerals (Stripe & Linear Financial/Telemetry Polish) */
+.telemetry-chip,
+.q-points-pill,
+.q-num-pill,
+.opt-badge-letter,
+.q-nav-btn,
+.metric-val,
+.res-stat-cell b,
+.big-score-number,
+.planner-counter-badge,
+.tag-points {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  min-height: 100vh;
+}
+
+/* GPU Hardware-Accelerated Fixed Background Plane (Eliminates Scroll Repaint) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-gradient);
+  background-color: var(--bg);
+  z-index: -99999;
+  pointer-events: none;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+button {
+  font: inherit;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+h1, h2, h3, .header-title-group h1, .topic-full-title, .mod-guide-header h2 {
+  font-family: var(--font-display), var(--font-sans);
+  letter-spacing: -0.03em;
+}
+
+/* ==========================================================================
+   ULTRA-SLENDER FROSTED SCROLLBARS (macOS Floating Glass Aesthetic)
+   ========================================================================== */
+/* Standard Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(140, 130, 115, 0.35) transparent;
+}
+
+[data-theme="dark"] * {
+  scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
+}
+
+/* WebKit: Chrome, Edge, Safari, Opera */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 130, 115, 0.28);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: background 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 130, 115, 0.55);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--primary-blue, #2563eb);
+}
+
+/* Dark Mode Scrollbars */
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.38);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:active {
+  background: var(--primary-blue, #3b82f6);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+  outline: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.app-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px 28px 40px;
+}
+
+@media (max-width: 640px) {
+  .app-wrapper {
+    padding: 10px 10px 32px;
+  }
+}
+
+/* Canvas Confetti Layer */
+#confettiCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 9999999;
+}

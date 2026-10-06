@@ -43,7 +43,7 @@ Features **535 verified questions** extracted directly from official university 
 | **10** | **Ages** | ✅ Active | **26 Qs** | Ratio & Temporal Shifts (10 Qs), Sum/Difference Invariants (7 Qs), Product-Based Problems (4 Qs), Multi-Person Systems (5 Qs) |
 | **11** | **Partnership** | ✅ Active | **18 Qs** | Simple & Compound Investments (6 Qs), Variable Time & Inversion (7 Qs), Working Partners & Deductions (5 Qs) |
 | **12** | **Allegation** | ✅ Active | _Active in Visualizers_ | Rule of Alligation Cross & Mean Concentration Balance |
-| **13** | **Odd Man Out** | ✅ Active | **27 Qs** | Single Letter (2 Qs), Letter Pairs (7 Qs), Triplets & Letter Sets (18 Qs) |
+| **13** | **Odd One Out** | ✅ Active | **27 Qs** | Single Letter (2 Qs), Letter Pairs (7 Qs), Triplets & Letter Sets (18 Qs) |
 | **14** | **Syllogism** | ✅ Active | **25 Qs** | Direct Deductions (6 Qs), Complementary Either-Or Pairs (6 Qs), Multi-Premise Chains (10 Qs), Hybrid Either-Or (3 Qs) |
 |        | **Total Database Pool** | | **535 Questions** | **44 Problem Types Fully Verified** |
 

@@ -218,4 +218,4 @@ Double-click `index.html` in your file explorer to open the application in any m
 
 ## 📝 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is open-source and available under the [MIT License](LICENSE). 

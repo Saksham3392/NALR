@@ -1,0 +1,8 @@
+services:
+  # Static Site Deployment for NALR Masterclass
+  - type: web
+    name: nalr-mcqs-revision
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    autoDeploy: true

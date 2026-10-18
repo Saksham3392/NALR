@@ -1,0 +1,990 @@
+[
+  {
+    "id": "mod16_q61",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "What is the number of zeroes in 1000! (factorial)?",
+    "options": [
+      "1",
+      "5",
+      "2",
+      "None of these"
+    ],
+    "correct": "None of these",
+    "explanation": "🔢 Legendre's Formula for Trailing Zeroes:\n1. The number of trailing zeroes in n! equals the exponent of 5 in its prime factorization:\n   Z = ⌊n/5⌋ + ⌊n/25⌋ + ⌊n/125⌋ + ⌊n/625⌋ + ...\n2. For 1000!:\n   ⌊1000/5⌋ = 200\n   ⌊1000/25⌋ = 40\n   ⌊1000/125⌋ = 8\n   ⌊1000/625⌋ = 1\n3. Total trailing zeroes = 200 + 40 + 8 + 1 = 249.\n4. Since 249 is not among the options (1, 5, 2), the correct answer is **None of these**."
+  },
+  {
+    "id": "mod16_q62",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "Find the number of trailing zeroes in 120!.",
+    "options": [
+      "12",
+      "15",
+      "16",
+      "None of these"
+    ],
+    "correct": "None of these",
+    "explanation": "🔢 Trailing Zeroes in Factorial:\n1. By Legendre's Formula, trailing zeroes in 120!:\n   ⌊120/5⌋ = 24\n   ⌊120/25⌋ = 4\n2. Total trailing zeroes = 24 + 4 = 28.\n3. Since 28 is not listed in the options (12, 15, 16), the correct choice is **None of these**."
+  },
+  {
+    "id": "mod16_q63",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "What is the number of two-digit prime numbers?",
+    "options": [
+      "25",
+      "17",
+      "21",
+      "None of these"
+    ],
+    "correct": "21",
+    "explanation": "🔢 Prime Number Count:\n1. Total prime numbers between 1 and 100 = 25.\n2. The one-digit prime numbers are 2, 3, 5, and 7 (4 primes).\n3. Number of two-digit primes = 25 − 4 = **21**.\n   (They are: 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97)."
+  },
+  {
+    "id": "mod16_q64",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "What is the unit's digit of 2⁵¹?",
+    "options": [
+      "2",
+      "8",
+      "1",
+      "4"
+    ],
+    "correct": "8",
+    "explanation": "🔢 Cyclicity of Powers of 2:\n1. The unit digits of successive powers of 2 follow a period of 4:\n   2¹ → 2, 2² → 4, 2³ → 8, 2⁴ → 6.\n2. Divide the power by 4: 51 mod 4 = 3.\n3. The unit digit of 2⁵¹ is the same as that of 2³, which is **8**."
+  },
+  {
+    "id": "mod16_q65",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "What is the unit's digit of 213 × 212 × 347 × 468?",
+    "options": [
+      "4",
+      "8",
+      "6",
+      "2"
+    ],
+    "correct": "6",
+    "explanation": "🔢 Product of Unit Digits:\n1. Extract the unit digit of each factor:\n   3, 2, 7, 8.\n2. Multiply sequentially modulo 10:\n   3 × 2 = 6\n   6 × 7 = 42 → unit digit 2\n   2 × 8 = 16 → unit digit 6.\n3. Therefore, the unit digit of the product is **6**."
+  },
+  {
+    "id": "mod16_q66",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "The last three digits in the multiplication 12345 × 54321 will be:",
+    "options": [
+      "745",
+      "945",
+      "865",
+      "235"
+    ],
+    "correct": "745",
+    "explanation": "🔢 Last Three Digits (Modulo 1000):\n1. To find the last three digits, evaluate 12345 × 54321 mod 1000.\n2. 12345 ≡ 345 (mod 1000) and 54321 ≡ 321 (mod 1000).\n3. 345 × 321 = 110,745.\n4. 110,745 mod 1000 = **745**."
+  },
+  {
+    "id": "mod16_q67",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "Which among the following is prime?",
+    "options": [
+      "668",
+      "558",
+      "900",
+      "None of these"
+    ],
+    "correct": "None of these",
+    "explanation": "🔢 Primality Testing:\n1. 668 is an even number > 2, hence divisible by 2 (composite).\n2. 558 has sum of digits 5 + 5 + 8 = 18, which is divisible by 9 (composite).\n3. 900 ends in 0, so it is divisible by 2, 5, 10 (composite).\n4. None of the given numbers is prime. Hence, the answer is **None of these**."
+  },
+  {
+    "id": "mod16_q68",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "The prime numbers dividing 143 and leaving a remainder of 3 in each case are:",
+    "options": [
+      "2 and 11",
+      "3 and 7",
+      "5 and 7",
+      "11 and 13"
+    ],
+    "correct": "5 and 7",
+    "explanation": "🔢 Remainder Condition on Divisors:\n1. If a prime p divides 143 leaving remainder 3, then p must divide (143 − 3) = 140, and p must be strictly greater than the remainder (p > 3).\n2. Prime factorization of 140 = 2² × 5 × 7.\n3. The prime factors of 140 are 2, 5, and 7.\n4. Since p > 3, p can only be 5 or 7.\n   Check: 143 ÷ 5 = 28 remainder 3; 143 ÷ 7 = 20 remainder 3.\n5. Hence, the prime numbers are **5 and 7**."
+  },
+  {
+    "id": "mod16_q69",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A two-digit number is k times the sum of its digits. The number formed by reversing its digits is m times the sum of its digits. Find m.",
+    "options": [
+      "10 − k",
+      "11 − k",
+      "9 − k",
+      "k − 1"
+    ],
+    "correct": "11 − k",
+    "explanation": "🔢 Digit Reversal Invariant:\n1. Let the two-digit number be 10x + y. Sum of digits = x + y.\n   Given: 10x + y = k(x + y)  ---(1)\n2. The number formed by reversing digits is 10y + x = m(x + y)  ---(2)\n3. Adding equation (1) and equation (2):\n   (10x + y) + (10y + x) = (k + m)(x + y)\n   11(x + y) = (k + m)(x + y)\n4. Dividing both sides by (x + y):\n   k + m = 11 ⟹ m = **11 − k**."
+  },
+  {
+    "id": "mod16_q70",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "If the largest three-digit number is subtracted from the smallest five-digit number, the remainder is:",
+    "options": [
+      "9000",
+      "9001",
+      "90001",
+      "90007"
+    ],
+    "correct": "9001",
+    "explanation": "🔢 Direct Subtraction:\n1. Smallest five-digit number = 10,000.\n2. Largest three-digit number = 999.\n3. Difference = 10,000 − 999 = **9001**."
+  },
+  {
+    "id": "mod16_q71",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "The greatest four-digit number exactly divisible by 88 is:",
+    "options": [
+      "8888",
+      "9944",
+      "9988",
+      "9998"
+    ],
+    "correct": "9944",
+    "explanation": "🔢 Divisibility by 88:\n1. The greatest four-digit number is 9999.\n2. Divide 9999 by 88:\n   9999 = 88 × 113 + 55.\n3. Subtract the remainder: 9999 − 55 = **9944**.\n4. Verification: 9944 is divisible by 8 (944 ÷ 8 = 118) and by 11 ((9+4) − (9+4) = 0)."
+  },
+  {
+    "id": "mod16_q72",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "If the number 4A306768B2 is divisible by both 8 and 11, the smallest possible values of A and B will be:",
+    "options": [
+      "A = 3, B = 5",
+      "A = 5, B = 4",
+      "A = 5, B = 2",
+      "A = 5, B = 3"
+    ],
+    "correct": "A = 5, B = 3",
+    "explanation": "🔢 Simultaneous Divisibility by 8 and 11:\n1. Divisibility by 8 requires the last three digits '8B2' to be divisible by 8.\n   Testing values of digit B:\n   802 (No), 812 (No), 822 (No), 832 ÷ 8 = 104 (Yes) ⟹ Smallest B = 3.\n2. Divisibility by 11 requires the alternating sum of digits to be a multiple of 11:\n   Odd positions from right: 2 + 8 + 7 + 0 + A = 17 + A.\n   Even positions from right: B + 6 + 6 + 3 + 4 = 19 + B.\n   Difference = (17 + A) − (19 + B) = A − B − 2.\n3. Substituting B = 3:\n   A − 3 − 2 = A − 5 ≡ 0 (mod 11) ⟹ A = 5.\n4. Hence, the smallest values are **A = 5, B = 3**."
+  },
+  {
+    "id": "mod16_q73",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "What least value must be given to * so that the number 97215*6 is divisible by 12?",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "5"
+    ],
+    "correct": "3",
+    "explanation": "🔢 Divisibility by 12 (both 3 and 4):\n1. Divisible by 4: The last two digits '*6' must form a multiple of 4.\n   Possible values for *: 1 (16), 3 (36), 5 (56), 7 (76), 9 (96).\n2. Divisible by 3: The sum of digits must be a multiple of 3:\n   9 + 7 + 2 + 1 + 5 + * + 6 = 30 + *.\n3. Since 30 is already divisible by 3, * must be a multiple of 3.\n4. From the candidates {1, 3, 5, 7, 9}, the values divisible by 3 are {3, 9}.\n5. The least value is **3**."
+  },
+  {
+    "id": "mod16_q74",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Find the least value of * for which 4832*18 is divisible by 11.",
+    "options": [
+      "100",
+      "None",
+      "12",
+      "11"
+    ],
+    "correct": "None",
+    "explanation": "🔢 Divisibility by 11:\n1. Alternating sum of digits:\n   Odd positions from right: 8 + * + 3 + 4 = 15 + *\n   Even positions from right: 1 + 2 + 8 = 11\n2. Difference = (15 + *) − 11 = 4 + *.\n3. For divisibility by 11, 4 + * must be 11 ⟹ * = 7.\n4. Since 7 is not among the given options (100, 12, 11), the correct option is **None**."
+  },
+  {
+    "id": "mod16_q75",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "The number 1X38X is divisible by 12 when X = P, and by 9 when X = Q. What is P + Q?",
+    "options": [
+      "2",
+      "3",
+      "6",
+      "9"
+    ],
+    "correct": "3",
+    "explanation": "🔢 Dual Divisibility System:\n1. Divisible by 12 when X = P (must be divisible by 4 and 3):\n   - Divisible by 4: Last two digits '8P' must be divisible by 4 ⟹ P ∈ {0, 4, 8}.\n   - Divisible by 3: Sum of digits 1 + P + 3 + 8 + P = 12 + 2P must be divisible by 3 ⟹ 2P mod 3 = 0 ⟹ P ∈ {0, 3, 6, 9}.\n   - Common solution: P = 0.\n2. Divisible by 9 when X = Q:\n   - Sum of digits 12 + 2Q must be a multiple of 9.\n   - 12 + 2Q = 18 ⟹ 2Q = 6 ⟹ Q = 3.\n3. Therefore, P + Q = 0 + 3 = **3**."
+  },
+  {
+    "id": "mod16_q76",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_1",
+    "type_name": "Type 1: Number System",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "If x and y are the two digits of the number 653xy such that the number is divisible by 80, then x + y = ?",
+    "options": [
+      "2 or 6",
+      "4",
+      "4 or 8",
+      "8"
+    ],
+    "correct": "2 or 6",
+    "explanation": "🔢 Divisibility by 80 (both 10 and 8):\n1. Divisible by 10 ⟹ Last digit y = 0.\n2. The number is now 653x0. For divisibility by 8, the last three digits '3x0' must be divisible by 8.\n   Testing values of digit x:\n   320 ÷ 8 = 40 (x = 2)\n   360 ÷ 8 = 45 (x = 6)\n3. With y = 0, x + y can be 2 + 0 = 2 or 6 + 0 = 6.\n4. Therefore, x + y = **2 or 6**."
+  },
+  {
+    "id": "mod16_q77",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "The HCF of two numbers is 12 and their difference is also 12. The numbers are:",
+    "options": [
+      "12, 84",
+      "100, 112",
+      "40, 52",
+      "84, 96"
+    ],
+    "correct": "84, 96",
+    "explanation": "⚡ HCF and Difference Relation:\n1. Since HCF is 12, both numbers must be multiples of 12.\n2. In options: 100, 112 are not divisible by 12; 40, 52 are not divisible by 12.\n3. Testing 12 and 84: difference = 84 − 12 = 72 ≠ 12.\n4. Testing 84 and 96: difference = 96 − 84 = 12, and HCF(84, 96) = 12.\n5. Hence, the numbers are **84, 96**."
+  },
+  {
+    "id": "mod16_q78",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "The LCM of two numbers is 2376 while their HCF is 33. If one number is 297, the other number is:",
+    "options": [
+      "216",
+      "264",
+      "642",
+      "792"
+    ],
+    "correct": "264",
+    "explanation": "⚡ Fundamental Theorem of HCF & LCM:\n1. Product of two numbers = HCF × LCM.\n2. Other number = (HCF × LCM) / First number\n   = (33 × 2376) / 297.\n3. Since 297 / 33 = 9:\n   Other number = 2376 / 9 = **264**."
+  },
+  {
+    "id": "mod16_q79",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "Find the HCF of 4, 8, 16, 32 and 15.",
+    "options": [
+      "4",
+      "8",
+      "1",
+      "None of these"
+    ],
+    "correct": "1",
+    "explanation": "⚡ Co-prime Factor Analysis:\n1. Prime factorizations:\n   4 = 2², 8 = 2³, 16 = 2⁴, 32 = 2⁵\n   15 = 3 × 5.\n2. 15 shares no common prime factors with 2ⁿ.\n3. Thus, the greatest common divisor of the entire set is **1**."
+  },
+  {
+    "id": "mod16_q80",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "The product of two numbers is 1280 and their HCF is 8. The LCM of the numbers is:",
+    "options": [
+      "140",
+      "160",
+      "183",
+      "182"
+    ],
+    "correct": "160",
+    "explanation": "⚡ Product Property:\n1. Product of numbers = HCF × LCM.\n2. LCM = Product / HCF = 1280 / 8 = **160**."
+  },
+  {
+    "id": "mod16_q81",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Three numbers are in the ratio 2:3:4 and their HCF is 12. The LCM of the numbers is:",
+    "options": [
+      "144",
+      "192",
+      "96",
+      "72"
+    ],
+    "correct": "144",
+    "explanation": "⚡ Ratio and HCF Model:\n1. Let the numbers be 2H, 3H, 4H, where H = 12.\n2. The numbers are 2 × 12 = 24, 3 × 12 = 36, and 4 × 12 = 48.\n3. LCM(24, 36, 48):\n   24 = 2³ × 3\n   36 = 2² × 3²\n   48 = 2⁴ × 3\n   LCM = 2⁴ × 3² = 16 × 9 = **144**."
+  },
+  {
+    "id": "mod16_q82",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Find the LCM of 22, 540 and 108.",
+    "options": [
+      "5940",
+      "5640",
+      "4740",
+      "4940"
+    ],
+    "correct": "5940",
+    "explanation": "⚡ Prime Factorization LCM:\n1. 22 = 2 × 11\n2. 540 = 2² × 3³ × 5\n3. 108 = 2² × 3³\n4. LCM takes highest power of each prime:\n   2² × 3³ × 5 × 11 = 4 × 27 × 5 × 11 = 540 × 11 = **5940**."
+  },
+  {
+    "id": "mod16_q83",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "The LCM of two numbers is 1296 and their HCF is 96. If one number is 864, the other number is:",
+    "options": [
+      "72",
+      "64",
+      "144",
+      "1164"
+    ],
+    "correct": "144",
+    "explanation": "⚡ HCF × LCM Relation:\n1. Product of numbers = HCF × LCM.\n2. Other number = (HCF × LCM) / First number\n   = (96 × 1296) / 864.\n3. 1296 / 864 = 3 / 2.\n4. Other number = 96 × (3 / 2) = 48 × 3 = **144**."
+  },
+  {
+    "id": "mod16_q84",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "The LCM of two numbers is 1920 and their HCF is 16. If one number is 128, find the other number.",
+    "options": [
+      "204",
+      "240",
+      "360",
+      "320"
+    ],
+    "correct": "240",
+    "explanation": "⚡ Product Property:\n1. Other number = (HCF × LCM) / Given number\n   = (16 × 1920) / 128.\n2. Since 128 / 16 = 8:\n   Other number = 1920 / 8 = **240**."
+  },
+  {
+    "id": "mod16_q85",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "Three sets of English, Mathematics and Science books contain 336, 240 and 96 books respectively. They must be stacked subject-wise, with the height of every stack the same. The total number of stacks will be:",
+    "options": [
+      "14",
+      "21",
+      "22",
+      "48"
+    ],
+    "correct": "14",
+    "explanation": "⚡ Maximum Equal Stack Size (HCF):\n1. Height of each stack = HCF(336, 240, 96).\n   - 336 = 48 × 7\n   - 240 = 48 × 5\n   - 96 = 48 × 2\n   HCF = 48 books per stack.\n2. Total number of stacks = (336/48) + (240/48) + (96/48)\n   = 7 + 5 + 2 = **14**."
+  },
+  {
+    "id": "mod16_q86",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "Find the LCM of 16, 24 and 36.",
+    "options": [
+      "123",
+      "111",
+      "11",
+      "None of these"
+    ],
+    "correct": "None of these",
+    "explanation": "⚡ LCM of Integers:\n1. Prime factors:\n   16 = 2⁴\n   24 = 2³ × 3\n   36 = 2² × 3²\n2. LCM = 2⁴ × 3² = 16 × 9 = 144.\n3. Since 144 is not listed among (123, 111, 11), the correct option is **None of these**."
+  },
+  {
+    "id": "mod16_q87",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Find the least number of soldiers in a regiment such that they can stand in rows of 18, 15 and 25 and also form a perfect square.",
+    "options": [
+      "900",
+      "1600",
+      "2500",
+      "450"
+    ],
+    "correct": "900",
+    "explanation": "⚡ LCM and Square Formation:\n1. LCM(18, 15, 25):\n   18 = 2 × 3²\n   15 = 3 × 5\n   25 = 5²\n   LCM = 2 × 3² × 5² = 450.\n2. To make 450 a perfect square, each prime factor must have an even exponent:\n   450 = 2¹ × 3² × 5².\n3. Multiply by 2 to complete the square: 450 × 2 = **900** (= 30²)."
+  },
+  {
+    "id": "mod16_q88",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Find the least perfect square divisible by 8, 9 and 10.",
+    "options": [
+      "4000",
+      "3600",
+      "6400",
+      "111"
+    ],
+    "correct": "3600",
+    "explanation": "⚡ Perfect Square Divisible by Multiple Numbers:\n1. Find LCM(8, 9, 10):\n   8 = 2³\n   9 = 3²\n   10 = 2 × 5\n   LCM = 2³ × 3² × 5 = 360.\n2. Prime factor exponents in 360: 2³ × 3² × 5¹.\n3. To make it a square, multiply by 2¹ × 5¹ = 10:\n   360 × 10 = **3600** (= 60²)."
+  },
+  {
+    "id": "mod16_q89",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "Find the greatest number that will exactly divide 200 and 320.",
+    "options": [
+      "30",
+      "40",
+      "50",
+      "45"
+    ],
+    "correct": "40",
+    "explanation": "⚡ Highest Common Factor:\n1. 200 = 40 × 5\n2. 320 = 40 × 8\n3. Since 5 and 8 are co-prime, HCF(200, 320) = **40**."
+  },
+  {
+    "id": "mod16_q90",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Six bells commence tolling together and toll at intervals of 2, 4, 6, 8, 10 and 12 seconds respectively. In 30 minutes, how many times do they toll together, including the one at the beginning?",
+    "options": [
+      "16",
+      "15",
+      "14",
+      "None of these"
+    ],
+    "correct": "16",
+    "explanation": "⚡ Interval of Simultaneous Tolling:\n1. Find LCM(2, 4, 6, 8, 10, 12):\n   LCM = 120 seconds = 2 minutes.\n2. In 30 minutes, number of intervals = 30 / 2 = 15.\n3. Including the toll at t = 0 (the beginning): 15 + 1 = **16** times."
+  },
+  {
+    "id": "mod16_q91",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_2",
+    "type_name": "Type 2: H.C.F. & L.C.M.",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "What is the least number which, when doubled, becomes exactly divisible by 9, 15, 21 and 30?",
+    "options": [
+      "196",
+      "189",
+      "630",
+      "315"
+    ],
+    "correct": "315",
+    "explanation": "⚡ Doubled LCM Condition:\n1. Find LCM(9, 15, 21, 30):\n   9 = 3²\n   15 = 3 × 5\n   21 = 3 × 7\n   30 = 2 × 3 × 5\n   LCM = 2 × 3² × 5 × 7 = 630.\n2. When the required number N is doubled, it equals 630:\n   2N = 630 ⟹ N = 630 / 2 = **315**."
+  },
+  {
+    "id": "mod16_q92",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "Find the average of all the numbers between 6 and 34 that are divisible by 5.",
+    "options": [
+      "18",
+      "19",
+      "20",
+      "22"
+    ],
+    "correct": "20",
+    "explanation": "📊 Average of Arithmetic Progression:\n1. The multiples of 5 strictly between 6 and 34 are: 10, 15, 20, 25, 30.\n2. For any symmetric AP, Average = (First term + Last term) / 2\n   = (10 + 30) / 2 = 40 / 2 = **20**."
+  },
+  {
+    "id": "mod16_q93",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "The average of 5 terms is 50. If the first four terms are 45, 42, 119 and 84, what is the last term?",
+    "options": [
+      "56",
+      "−20",
+      "−40",
+      "−50"
+    ],
+    "correct": "−40",
+    "explanation": "📊 Sum of Terms Equation:\n1. Total sum of all 5 terms = 5 × 50 = 250.\n2. Sum of the first four terms = 45 + 42 + 119 + 84 = 290.\n3. Last term = Total sum − Sum of 4 terms = 250 − 290 = **−40**."
+  },
+  {
+    "id": "mod16_q94",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "If the average of 8 terms is 40 and the average of the first 6 terms is 35, what is the average of the remaining 2 terms?",
+    "options": [
+      "30",
+      "55",
+      "40",
+      "42"
+    ],
+    "correct": "55",
+    "explanation": "📊 Partitioned Averages:\n1. Sum of all 8 terms = 8 × 40 = 320.\n2. Sum of the first 6 terms = 6 × 35 = 210.\n3. Sum of the remaining 2 terms = 320 − 210 = 110.\n4. Average of the remaining 2 terms = 110 / 2 = **55**."
+  },
+  {
+    "id": "mod16_q95",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "Find the average of the first 101 natural numbers.",
+    "options": [
+      "47",
+      "48",
+      "51",
+      "49"
+    ],
+    "correct": "51",
+    "explanation": "📊 Average of Natural Numbers Formula:\n1. Average of the first n natural numbers = (n + 1) / 2.\n2. For n = 101: Average = (101 + 1) / 2 = 102 / 2 = **51**."
+  },
+  {
+    "id": "mod16_q96",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "Find the average of the first 7 natural numbers.",
+    "options": [
+      "4",
+      "6",
+      "7",
+      "9"
+    ],
+    "correct": "4",
+    "explanation": "📊 Formula for n Natural Numbers:\n1. Average = (n + 1) / 2.\n2. For n = 7: Average = (7 + 1) / 2 = 8 / 2 = **4**."
+  },
+  {
+    "id": "mod16_q97",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "The average of three consecutive even numbers is M. If the next five even numbers are also included, the average of all 8 numbers will be:",
+    "options": [
+      "M + 6",
+      "M + 3",
+      "M + 5",
+      "M + 4"
+    ],
+    "correct": "M + 5",
+    "explanation": "📊 Consecutive Even Numbers Progression:\n1. Let the 3 consecutive even numbers be M − 2, M, M + 2 (their average is M).\n2. The next five even numbers are M + 4, M + 6, M + 8, M + 10, M + 12.\n3. The complete set of 8 consecutive even numbers is an AP from (M − 2) to (M + 12).\n4. Average of AP = (First + Last) / 2 = ((M − 2) + (M + 12)) / 2 = (2M + 10) / 2 = **M + 5**."
+  },
+  {
+    "id": "mod16_q98",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "The average of 7 consecutive positive integers is 10. The average of the lowest and highest numbers is:",
+    "options": [
+      "7",
+      "10",
+      "15",
+      "Data insufficient"
+    ],
+    "correct": "10",
+    "explanation": "📊 AP Symmetry Property:\n1. In any arithmetic progression with an odd number of terms, the overall average equals both the middle term and the average of the first and last terms.\n2. Average of (lowest + highest) / 2 = Overall average = **10**."
+  },
+  {
+    "id": "mod16_q99",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "In a class, there are 20 boys. Their average age decreases by 2 months when a boy aged 18 years is replaced by a new boy. Find the age of the new boy.",
+    "options": [
+      "16 years",
+      "21 years 4 months",
+      "14 years 8 months",
+      "15 years"
+    ],
+    "correct": "14 years 8 months",
+    "explanation": "📊 Replacement Age Formula:\n1. Total decrease in sum of ages = Number of boys × Decrease in average\n   = 20 × 2 months = 40 months = 3 years 4 months.\n2. Age of new boy = Age of replaced boy − Total decrease\n   = 18 years − 3 years 4 months = **14 years 8 months**."
+  },
+  {
+    "id": "mod16_q100",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "The average weight of 20 students is 45 kg. A student weighing 40 kg replaces an old student, and the class average decreases by 1 kg. The weight of the replaced student is:",
+    "options": [
+      "55 kg",
+      "50 kg",
+      "60 kg",
+      "None of these"
+    ],
+    "correct": "60 kg",
+    "explanation": "📊 Replacement Weight Formula:\n1. Total decrease in weight = 20 × 1 kg = 20 kg.\n2. Weight of old (replaced) student = Weight of new student + Total decrease\n   = 40 kg + 20 kg = **60 kg**."
+  },
+  {
+    "id": "mod16_q101",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "The average price of 3 diamonds of the same weight is Rs. 5 crore. The average price of the two costliest diamonds is double the price of the cheapest diamond. The price of the cheapest diamond is:",
+    "options": [
+      "Rs. 3 crore",
+      "Rs. 5 crore",
+      "Rs. 1.66 crore",
+      "Cannot be determined"
+    ],
+    "correct": "Rs. 3 crore",
+    "explanation": "📊 Linear Average System:\n1. Total cost of 3 diamonds = 3 × 5 = Rs. 15 crore.\n2. Let the cheapest diamond be C, and the two costliest be A and B:\n   A + B + C = 15 crore  ---(1)\n3. Given: (A + B) / 2 = 2C ⟹ A + B = 4C.\n4. Substitute into (1): 4C + C = 15 ⟹ 5C = 15 ⟹ C = **Rs. 3 crore**."
+  },
+  {
+    "id": "mod16_q102",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Kamlesh bought 65 books for Rs. 1050 from one shop and 50 books for Rs. 1020 from another. What was the average price per book?",
+    "options": [
+      "Rs. 36.4",
+      "Rs. 18.2",
+      "Rs. 24",
+      "Rs. 18"
+    ],
+    "correct": "Rs. 18",
+    "explanation": "📊 Weighted Total Average:\n1. Total expenditure = Rs. 1050 + Rs. 1020 = Rs. 2070.\n2. Total books purchased = 65 + 50 = 115 books.\n3. Average price per book = 2070 / 115 = **Rs. 18**."
+  },
+  {
+    "id": "mod16_q103",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_3",
+    "type_name": "Type 3: Average",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "Pankaj travelled to the post office at 60 km/h. On the return journey, he covered half the distance at 10 km/h and the remaining half at 30 km/h. The average speed for the whole journey was:",
+    "options": [
+      "5.67 km/h",
+      "24 km/h",
+      "22.88 km/h",
+      "5.45 km/h"
+    ],
+    "correct": "24 km/h",
+    "explanation": "📊 Total Distance over Total Time:\n1. Let one-way distance be d = 60 km.\n   - Outward time t₁ = 60 / 60 = 1 hour.\n2. Return journey (distance = 60 km):\n   - First 30 km at 10 km/h: t₂ = 30 / 10 = 3 hours.\n   - Remaining 30 km at 30 km/h: t₃ = 30 / 30 = 1 hour.\n3. Total round-trip distance = 60 + 60 = 120 km.\n4. Total time = 1 + 3 + 1 = 5 hours.\n5. Average speed = 120 / 5 = **24 km/h**."
+  },
+  {
+    "id": "mod16_q104",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_4",
+    "type_name": "Type 4: Remainder Theorem",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "What is the remainder when 2¹⁰⁰ is divided by 3?",
+    "options": [
+      "3",
+      "0",
+      "1",
+      "2"
+    ],
+    "correct": "1",
+    "explanation": "⚡ Modular Base Splitting:\n1. 2 ≡ −1 (mod 3).\n2. 2¹⁰⁰ ≡ (−1)¹⁰⁰ (mod 3).\n3. Since 100 is even, (−1)¹⁰⁰ = 1.\n4. Therefore, the remainder is **1**."
+  },
+  {
+    "id": "mod16_q105",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_4",
+    "type_name": "Type 4: Remainder Theorem",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "What is the remainder when 2¹⁰⁰ is divided by 7?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": "2",
+    "explanation": "⚡ Modular Power Grouping:\n1. 2³ = 8 ≡ 1 (mod 7).\n2. Express the exponent in multiples of 3: 100 = 3 × 33 + 1.\n3. 2¹⁰⁰ = (2³)³³ × 2¹ ≡ (1)³³ × 2 = **2** (mod 7)."
+  },
+  {
+    "id": "mod16_q106",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_4",
+    "type_name": "Type 4: Remainder Theorem",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "If 17²⁰⁰ is divided by 18, the remainder is:",
+    "options": [
+      "17",
+      "16",
+      "1",
+      "2"
+    ],
+    "correct": "1",
+    "explanation": "⚡ Negative Remainder Rule:\n1. 17 ≡ −1 (mod 18).\n2. 17²⁰⁰ ≡ (−1)²⁰⁰ (mod 18).\n3. Since 200 is even, (−1)²⁰⁰ = 1.\n4. Therefore, the remainder is **1**."
+  },
+  {
+    "id": "mod16_q107",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_4",
+    "type_name": "Type 4: Remainder Theorem",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "What is the remainder when 293 is divided by 7?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "6"
+    ],
+    "correct": "6",
+    "explanation": "⚡ Direct Division:\n1. 293 ÷ 7 = 41 with a remainder of 6.\n   Verification: 41 × 7 = 287, and 293 − 287 = 6.\n2. The remainder is **6**."
+  },
+  {
+    "id": "mod16_q108",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_4",
+    "type_name": "Type 4: Remainder Theorem",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A number, when divided by 357, leaves a remainder of 39. If the number is divided by 7, the remainder will be:",
+    "options": [
+      "4",
+      "9",
+      "5",
+      "11"
+    ],
+    "correct": "4",
+    "explanation": "⚡ Divisor Factor Property:\n1. The original divisor 357 is exactly divisible by 7 (357 = 7 × 51).\n2. Therefore, the remainder when the number is divided by 7 equals the remainder when 39 is divided by 7.\n3. 39 ÷ 7 = 5 with remainder **4** (39 = 7 × 5 + 4)."
+  },
+  {
+    "id": "mod16_q109",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_4",
+    "type_name": "Type 4: Remainder Theorem",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A number, when divided by 221, leaves a remainder of 64. What is the remainder when the same number is divided by 13?",
+    "options": [
+      "0",
+      "1",
+      "11",
+      "12"
+    ],
+    "correct": "12",
+    "explanation": "⚡ Divisor Factor Property:\n1. 221 is exactly divisible by 13 (221 = 13 × 17).\n2. The remainder when the number is divided by 13 is simply 64 mod 13.\n3. 64 = 13 × 4 + 12.\n4. Therefore, the remainder is **12**."
+  },
+  {
+    "id": "mod16_q110",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_4",
+    "type_name": "Type 4: Remainder Theorem",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A number, when divided by 296, gives a remainder of 75. When the same number is divided by 37, the remainder will be:",
+    "options": [
+      "1",
+      "2",
+      "8",
+      "11"
+    ],
+    "correct": "1",
+    "explanation": "⚡ Divisor Factor Property:\n1. 296 is exactly divisible by 37 (296 = 37 × 8).\n2. Remainder = 75 mod 37.\n3. 75 = 37 × 2 + 1.\n4. Hence, the remainder is **1**."
+  },
+  {
+    "id": "mod16_q111",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_4",
+    "type_name": "Type 4: Remainder Theorem",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "The integers 34041 and 32506, when divided by a three-digit integer n, leave the same remainder. What is n?",
+    "options": [
+      "289",
+      "367",
+      "453",
+      "307"
+    ],
+    "correct": "307",
+    "explanation": "⚡ Equal Remainder Difference Rule:\n1. If a and b leave the same remainder when divided by n, then n must be a factor of their difference |a − b|.\n2. Difference = 34041 − 32506 = 1535.\n3. Prime factorization of 1535 = 5 × 307.\n4. The divisors of 1535 are 1, 5, 307, 1535.\n5. The only three-digit integer divisor is **307**."
+  },
+  {
+    "id": "mod16_q112",
+    "module_id": "mod16",
+    "module_name": "ST1 Questions",
+    "syllabus_lec": "ST-1 Revision Question Set",
+    "type_id": "type_4",
+    "type_name": "Type 4: Remainder Theorem",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "Find the least number which, when divided by 27, 35, 45 and 49, leaves a remainder of 6 in each case.",
+    "options": [
+      "5523",
+      "6620",
+      "6623",
+      "6621"
+    ],
+    "correct": "6621",
+    "explanation": "⚡ Constant Remainder Model:\n1. Required number = LCM(27, 35, 45, 49) + Remainder.\n2. Prime factorizations:\n   27 = 3³\n   35 = 5 × 7\n   45 = 3² × 5\n   49 = 7²\n3. LCM = 3³ × 5 × 7² = 27 × 5 × 49 = 135 × 49 = 6615.\n4. Required number = 6615 + 6 = **6621**."
+  }
+]

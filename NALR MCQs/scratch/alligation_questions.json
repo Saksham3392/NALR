@@ -1,0 +1,502 @@
+[
+  {
+    "id": "allig_q1",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_1",
+    "type_name": "Type 1: Mean Price & Basic Alligation Cross-Rule",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A vessel of 120 liters is filled with milk and water. 80% of milk and 40% of water is taken out of the vessel. It is found that the vessel is vacated by 65%. What is the ratio of milk to water?",
+    "options": [
+      "5 : 3",
+      "6 : 5",
+      "3 : 5",
+      "4 : 3",
+      "None of these"
+    ],
+    "correct": "5 : 3",
+    "explanation": "Using the Rule of Alligation on the percentage taken out:\n• Percentage of milk removed = 80%\n• Percentage of water removed = 40%\n• Overall mean percentage removed = 65%\n\nBy Alligation Cross:\nMilk : Water = (65 - 40) : (80 - 65) = 25 : 15 = **5 : 3**."
+  },
+  {
+    "id": "allig_q2",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_1",
+    "type_name": "Type 1: Mean Price & Basic Alligation Cross-Rule",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "In what proportion must wheat at Rs.3.20 per kg be mixed with wheat at Rs.3.70 per kg, so that the mixture be worth Rs.3.35 a kg?",
+    "options": [
+      "9 : 5",
+      "7 : 5",
+      "7 : 3",
+      "3 : 1",
+      "None of these"
+    ],
+    "correct": "7 : 3",
+    "explanation": "Using the Rule of Alligation:\n• Cheaper rate (c) = Rs. 3.20\n• Dearer rate (d) = Rs. 3.70\n• Mean rate (m) = Rs. 3.35\n\nQuantity of Cheaper : Quantity of Dearer = (d - m) : (m - c)\n= (3.70 - 3.35) : (3.35 - 3.20)\n= 0.35 : 0.15 = **7 : 3**."
+  },
+  {
+    "id": "allig_q3",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_1",
+    "type_name": "Type 1: Mean Price & Basic Alligation Cross-Rule",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "How much Sugar at Rs 24 per kg should be added to 15 kg of tea at Rs 60 per kg, as to make the mixture worth Rs 39 per kg?",
+    "options": [
+      "21 kg",
+      "20 kg",
+      "27 kg",
+      "18 kg",
+      "None of these"
+    ],
+    "correct": "21 kg",
+    "explanation": "Using the Rule of Alligation:\n• Rate of sugar = Rs. 24/kg\n• Rate of tea = Rs. 60/kg\n• Mean rate = Rs. 39/kg\n\nRatio of Sugar : Tea = (60 - 39) : (39 - 24) = 21 : 15 = 7 : 5.\nSince Tea = 15 kg, Sugar = (7 / 5) × 15 = **21 kg**."
+  },
+  {
+    "id": "allig_q4",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_1",
+    "type_name": "Type 1: Mean Price & Basic Alligation Cross-Rule",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A mixture of a certain quantity of milk with 25 liters of water is worth Rs.2 per liter. If pure milk be worth Rs.12 per liter how much milk is there in the mixture?",
+    "options": [
+      "5 liters",
+      "7 liters",
+      "6 liters",
+      "4 liters",
+      "None of these"
+    ],
+    "correct": "5 liters",
+    "explanation": "Cost price of water = Rs. 0 per liter.\n• Cost price of pure milk = Rs. 12 per liter\n• Mean cost price of mixture = Rs. 2 per liter\n\nBy Rule of Alligation:\nQuantity of Milk : Quantity of Water = (2 - 0) : (12 - 2) = 2 : 10 = 1 : 5.\nGiven quantity of water = 25 liters:\nQuantity of milk = (1 / 5) × 25 = **5 liters**."
+  },
+  {
+    "id": "allig_q5",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_1",
+    "type_name": "Type 1: Mean Price & Basic Alligation Cross-Rule",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "In what proportion must water be mixed with spirit to gain 16% by selling it at cost price?",
+    "options": [
+      "4 : 25",
+      "2 : 9",
+      "1 : 6",
+      "25 : 4",
+      "None of these"
+    ],
+    "correct": "4 : 25",
+    "explanation": "Let CP of 1 liter of pure spirit = Rs. 1.\nSelling price of 1 liter mixture = Rs. 1 (sold at CP).\nGain = 16%.\nCP of 1 liter mixture = 1 / 1.16 = 100 / 116 = Rs. 25/29.\n\nBy Alligation (Water @ Rs. 0, Spirit @ Rs. 1):\nQuantity of Water : Quantity of Spirit = (1 - 25/29) : (25/29 - 0) = (4/29) : (25/29) = **4 : 25**.\n(Directly: Profit % = Water / Spirit × 100% ⇒ Water / Spirit = 16 / 100 = 4 / 25)."
+  },
+  {
+    "id": "allig_q6",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_1",
+    "type_name": "Type 1: Mean Price & Basic Alligation Cross-Rule",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A person has a chemical of Rs.50 per liter. In what ratio should water be mixed in that chemical so that after selling the mixture at Rs. 40 per liter he may get a profit of 50%.",
+    "options": [
+      "7 : 8",
+      "9 : 8",
+      "10 : 7",
+      "4 : 3",
+      "None of these"
+    ],
+    "correct": "7 : 8",
+    "explanation": "Selling Price of mixture = Rs. 40/liter with 50% profit.\nCP of mixture = SP / (1 + Profit%) = 40 / 1.5 = 80/3 = Rs. 26.67/liter.\n• CP of water = Rs. 0/liter\n• CP of chemical = Rs. 50/liter\n\nBy Rule of Alligation:\nWater : Chemical = (50 - 80/3) : (80/3 - 0) = (70/3) : (80/3) = 70 : 80 = **7 : 8**."
+  },
+  {
+    "id": "allig_q7",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_1",
+    "type_name": "Type 1: Mean Price & Basic Alligation Cross-Rule",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Prabhu purchased 30 kg of rice at the rate of Rs.17.50 per kg and another 30 kg rice at a certain rate. He mixed the two and sold the entire quantity at the rate of Rs.18.60 per kg and made 20 per cent overall profit. At what price per kg did he purchase the lot of another 30 kg rice?",
+    "options": [
+      "14.50",
+      "12.50",
+      "15.50",
+      "13.50",
+      "None of these"
+    ],
+    "correct": "13.50",
+    "explanation": "Total quantity = 30 kg + 30 kg = 60 kg.\nSelling price = Rs. 18.60 per kg with 20% overall profit.\nMean Cost Price of mixture = 18.60 / 1.20 = Rs. 15.50 per kg.\n\nSince both varieties are in equal quantity (30 kg : 30 kg = 1 : 1), the mean price is the simple average of the two rates:\n(17.50 + x) / 2 = 15.50\n17.50 + x = 31.00\nx = 31.00 - 17.50 = **13.50**."
+  },
+  {
+    "id": "allig_q8",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_2",
+    "type_name": "Type 2: Rate, Speed & Commercial Mixtures",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A petrol pump owner mixed leaded and unleaded petrol in such a way that the mixture contains 10% unleaded petrol. What quantity of leaded petrol should be added to 1 liter mixture so that the percentage of unleaded petrol becomes 5%.",
+    "options": [
+      "1000 ml",
+      "900 ml",
+      "1900 ml",
+      "1800 ml",
+      "None of these"
+    ],
+    "correct": "1000 ml",
+    "explanation": "In 1 liter (1000 ml) mixture:\n• Unleaded petrol = 10% of 1000 ml = 100 ml.\nLet x ml of leaded petrol be added (which contains 0% unleaded petrol).\nNew total volume = (1000 + x) ml.\nThe percentage of unleaded petrol in the new mixture must be 5%:\n100 / (1000 + x) = 5 / 100 = 1 / 20\n1000 + x = 2000\nx = **1000 ml**."
+  },
+  {
+    "id": "allig_q9",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_2",
+    "type_name": "Type 2: Rate, Speed & Commercial Mixtures",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "150 gm of sugar solution has 20% sugar in it. How much sugar should be added to make it 25% in the solution?",
+    "options": [
+      "10 gm",
+      "45 gm",
+      "35 gm",
+      "40 gm",
+      "None of these"
+    ],
+    "correct": "10 gm",
+    "explanation": "In 150 gm solution:\n• Current sugar = 20% of 150 = 30 gm.\n• Water = 150 - 30 = 120 gm.\nWhen pure sugar is added, the water content remains constant at 120 gm.\nIn the new solution, sugar is 25%, so water is 75%:\n75% of new total = 120 gm ⇒ New total = 120 / 0.75 = 160 gm.\nSugar to be added = 160 - 150 = **10 gm**."
+  },
+  {
+    "id": "allig_q10",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_2",
+    "type_name": "Type 2: Rate, Speed & Commercial Mixtures",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "There are 75 students in a class, Rs.48 are distributed among them so that each boy gets Rs.1 and each girl gets 40P . Find the number of boys and girls in that class.",
+    "options": [
+      "30, 45",
+      "40, 35",
+      "25, 50",
+      "35, 40",
+      "None of these"
+    ],
+    "correct": "30, 45",
+    "explanation": "Total amount = Rs. 48 = 4800 paise. Total students = 75.\nMean amount per student = 4800 / 75 = 64 paise.\n• Amount per boy = Rs. 1 = 100 paise\n• Amount per girl = 40 paise\n\nBy Rule of Alligation:\nBoys : Girls = (64 - 40) : (100 - 64) = 24 : 36 = 2 : 3.\n• Number of boys = (2 / 5) × 75 = 30\n• Number of girls = (3 / 5) × 75 = 45\nResult = **30, 45**."
+  },
+  {
+    "id": "allig_q11",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_2",
+    "type_name": "Type 2: Rate, Speed & Commercial Mixtures",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "In a zoo, there are rabbits and pigeons. If heads are counted, there are 100 and if legs are counted, there are 290. How many rabbits are there?",
+    "options": [
+      "55",
+      "45",
+      "40",
+      "50",
+      "None of these"
+    ],
+    "correct": "45",
+    "explanation": "Each rabbit has 4 legs and each pigeon has 2 legs. Total heads = 100.\nAverage legs per head = 290 / 100 = 2.9 legs.\n\nBy Rule of Alligation:\nRabbits : Pigeons = (2.9 - 2) : (4 - 2.9) = 0.9 : 1.1 = 9 : 11.\n• Number of rabbits = [9 / (9 + 11)] × 100 = (9 / 20) × 100 = **45**."
+  },
+  {
+    "id": "allig_q12",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_2",
+    "type_name": "Type 2: Rate, Speed & Commercial Mixtures",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "A person travels 245 km in 6 hours in two stages. In the first part of the journey, he travels by bus at the speed of 30 km/hr. In the second part of the journey, he travels by train at the speed of 50 km/hr. How much distance did he travel by train?",
+    "options": [
+      "162.5 km",
+      "82.5 km",
+      "164 km",
+      "83 km",
+      "None of these"
+    ],
+    "correct": "162.5 km",
+    "explanation": "Average speed for total journey = 245 / 6 km/hr.\n• Bus speed = 30 km/hr\n• Train speed = 50 km/hr\n\nApplying Alligation with respect to time:\nTime by Bus : Time by Train = [50 - (245/6)] : [(245/6) - 30]\n= (55/6) : (65/6) = 55 : 65 = 11 : 13.\nTotal time = 6 hours.\nTime spent in train = [13 / (11 + 13)] × 6 = (13 / 24) × 6 = 13 / 4 = 3.25 hours.\nDistance traveled by train = Speed × Time = 50 × 3.25 = **162.5 km**."
+  },
+  {
+    "id": "allig_q13",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_2",
+    "type_name": "Type 2: Rate, Speed & Commercial Mixtures",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A trader has 25 kg of rice, part of which he sells at 4% profit and the rest at 9% profit. He gains 7% on the whole. What is the quantity sold at 9% profit?",
+    "options": [
+      "15 kg",
+      "10 kg",
+      "18 kg",
+      "12 kg",
+      "None of these"
+    ],
+    "correct": "15 kg",
+    "explanation": "Applying the Rule of Alligation on profit percentages:\n• Profit on first part = 4%\n• Profit on second part = 9%\n• Overall average profit = 7%\n\nRatio of quantity sold @ 4% to quantity sold @ 9% = (9 - 7) : (7 - 4) = 2 : 3.\nTotal quantity = 25 kg.\nQuantity sold at 9% profit = [3 / (2 + 3)] × 25 = (3 / 5) × 25 = **15 kg**."
+  },
+  {
+    "id": "allig_q14",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_2",
+    "type_name": "Type 2: Rate, Speed & Commercial Mixtures",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Ritu's expenditure and saving are in the ratio 5 : 2. Her income increases by 12%. Her expenditure also increases by 14%. By how many % does her saving increase?",
+    "options": [
+      "14%",
+      "7%",
+      "8%",
+      "9%",
+      "None of these"
+    ],
+    "correct": "7%",
+    "explanation": "Income = Expenditure + Saving.\nLet Expenditure = 500 and Saving = 200, so Income = 700.\n• New Income = 700 + 12% of 700 = 700 + 84 = 784.\n• New Expenditure = 500 + 14% of 500 = 500 + 70 = 570.\n• New Saving = 784 - 570 = 214.\n\nIncrease in saving = 214 - 200 = 14.\nPercentage increase in saving = (14 / 200) × 100% = **7%**."
+  },
+  {
+    "id": "allig_q15",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_3",
+    "type_name": "Type 3: Liquid Concentration & Vessel Mixing",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "A jar contains a mixture of two liquids A and B in the ratio 3 : 1. When 15 liters of the mixture is taken out and 9 liters of liquid B is poured into the jar, the ratio becomes 3 : 4. How many liters of liquid was contained in the jar?",
+    "options": [
+      "27 liters",
+      "24 liters",
+      "30 liters",
+      "21 liters",
+      "None of these"
+    ],
+    "correct": "27 liters",
+    "explanation": "Let initial total volume = 4x, so Liquid A = 3x and Liquid B = x.\nWhen 15 liters of mixture is removed:\n• A removed = (3/4) × 15 = 45/4 liters\n• B removed = (1/4) × 15 = 15/4 liters\nRemaining liquids: A = 3x - 45/4, B = x - 15/4.\n\nNow 9 liters of liquid B is poured in:\nNew quantity of B = x - 15/4 + 9 = x + 21/4.\nGiven new ratio A : B = 3 : 4:\n(3x - 45/4) / (x + 21/4) = 3 / 4\n4(3x - 45/4) = 3(x + 21/4)\n12x - 45 = 3x + 63/4\n9x = 45 + 15.75 = 60.75 ⇒ x = 6.75.\nTotal capacity of jar = 4x = 4 × 6.75 = **27 liters**."
+  },
+  {
+    "id": "allig_q16",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_3",
+    "type_name": "Type 3: Liquid Concentration & Vessel Mixing",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A vessel is filled with a liquid, 3 parts of which are water and 5 parts syrup. How much of the mixture must be drawn off and replaced with water so that the mixture may be half water and half syrup?",
+    "options": [
+      "1/5",
+      "1/7",
+      "4/5",
+      "3/10",
+      "None of these"
+    ],
+    "correct": "1/5",
+    "explanation": "Initially, syrup is 5/8 of the vessel and water is 3/8.\nLet the fraction of the mixture drawn off and replaced by water be x.\nAfter drawing off x, the remaining volume is (1 - x), which contains (5/8)(1 - x) syrup.\nSince pure water replaces the drawn mixture, no syrup is added back.\nIn the final mixture, syrup is 1/2 of the vessel:\n(5/8)(1 - x) = 1/2\n1 - x = (1/2) × (8/5) = 4/5\nx = 1 - 4/5 = **1/5**."
+  },
+  {
+    "id": "allig_q17",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_3",
+    "type_name": "Type 3: Liquid Concentration & Vessel Mixing",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "A vessel contains mixture of liquids A and B in the ratio 3 : 2. When 20 liters of the mixture is taken out and replaced by 20 liters of liquid B, the ratio changes to 1 : 4. How many liters of liquid A was there initially present in the vessel?",
+    "options": [
+      "14 liters",
+      "20 liters",
+      "18 liters",
+      "30 liters",
+      "None of these"
+    ],
+    "correct": "18 liters",
+    "explanation": "Let initial quantities be A = 3x and B = 2x (total = 5x).\nWhen 20 liters of mixture is drawn off:\n• Quantity of A removed = (3/5) × 20 = 12 liters\n• Quantity of B removed = (2/5) × 20 = 8 liters\nRemaining A = 3x - 12, remaining B = 2x - 8.\n\nNow 20 liters of liquid B is added:\nNew quantity of B = 2x - 8 + 20 = 2x + 12.\nNew ratio A : B = 1 : 4:\n(3x - 12) / (2x + 12) = 1 / 4\n4(3x - 12) = 2x + 12\n12x - 48 = 2x + 12\n10x = 60 ⇒ x = 6.\nInitial quantity of liquid A = 3x = 3 × 6 = **18 liters**."
+  },
+  {
+    "id": "allig_q18",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_3",
+    "type_name": "Type 3: Liquid Concentration & Vessel Mixing",
+    "difficulty": "Easy",
+    "points": 1,
+    "question": "56 liters of a mixture contains milk and water in the ratio 5 : 2. How much water is to be added to get a new mixture containing milk and water in the ratio 5 : 3?",
+    "options": [
+      "9 liters",
+      "6 liters",
+      "7 liters",
+      "8 liters",
+      "None of these"
+    ],
+    "correct": "8 liters",
+    "explanation": "In 56 liters of mixture:\n• Quantity of milk = (5 / 7) × 56 = 40 liters\n• Quantity of water = (2 / 7) × 56 = 16 liters\n\nLet w liters of water be added to make the ratio of milk to water 5 : 3.\nSince only water is added, the milk quantity remains 40 liters:\n40 / (16 + w) = 5 / 3\n5(16 + w) = 120\n16 + w = 24\nw = 24 - 16 = **8 liters**."
+  },
+  {
+    "id": "allig_q19",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_3",
+    "type_name": "Type 3: Liquid Concentration & Vessel Mixing",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "Three equal glasses are filled with mixtures of milk and water. The proportion of milk and water in each glass is as follows. In the first glass as 3 : 1, in the second glass as 5 : 3 and in the third as 9 : 7. The contents of the three glasses are emptied into a single vessel. What is the proportion of milk and water in it?",
+    "options": [
+      "31 : 17",
+      "17 : 31",
+      "15 : 31",
+      "31 : 15",
+      "None of these"
+    ],
+    "correct": "31 : 17",
+    "explanation": "Let the capacity of each glass be V. The proportions of milk in each glass are:\n• Glass 1: 3/4 = 12/16\n• Glass 2: 5/8 = 10/16\n• Glass 3: 9/16\n\nTotal milk from the 3 glasses = (12/16 + 10/16 + 9/16) V = 31V/16.\nTotal liquid from the 3 glasses = 3V = 48V/16.\nTotal water = 3V - 31V/16 = 17V/16.\n\nRatio of milk to water = 31 : 17 = **31 : 17**."
+  },
+  {
+    "id": "allig_q20",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_3",
+    "type_name": "Type 3: Liquid Concentration & Vessel Mixing",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "In an alloy, zinc and copper are in the ratio 3 : 4. In the second alloy the same elements are in the ratio 4 : 5. In what ratio should these two alloys be mixed to form a new alloy in which the two elements are in ratio 7 : 3?",
+    "options": [
+      "161 : 181",
+      "181 : 181",
+      "161 : 171",
+      "Not possible",
+      "None of these"
+    ],
+    "correct": "Not possible",
+    "explanation": "Let us check the proportion of zinc in each alloy:\n• First alloy: Zinc fraction = 3 / (3 + 4) = 3/7 ≈ 42.86%\n• Second alloy: Zinc fraction = 4 / (4 + 5) = 4/9 ≈ 44.44%\n• Desired alloy: Zinc fraction = 7 / (7 + 3) = 7/10 = 70.00%\n\nBy the Rule of Alligation, the resultant mixture concentration must always lie strictly between the concentrations of the two constituents (42.86% < Mean < 44.44%).\nSince 70% is higher than both alloys, it is **Not possible**."
+  },
+  {
+    "id": "allig_q21",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_3",
+    "type_name": "Type 3: Liquid Concentration & Vessel Mixing",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "There are two vessels of equal capacity, one full of milk, and the second one-third full of water. The second vessel is then filled up out of the first, the contents of the second are then poured back into the first till it is full and then again, the contents of the first are poured back into the second till it is full. What is the proportion of milk in the second vessel?",
+    "options": [
+      "Cannot possible",
+      "20/27",
+      "20/37",
+      "7/27",
+      "None of these"
+    ],
+    "correct": "20/27",
+    "explanation": "Let the capacity of each vessel be 1 unit.\nInitially: Vessel 1 = 1 milk; Vessel 2 = 1/3 water, 2/3 empty.\n\n• Step 1: Vessel 2 is filled from Vessel 1.\nVolume poured = 2/3 (all milk).\nVessel 1 remaining = 1/3 milk.\nVessel 2 = 1/3 water + 2/3 milk (Ratio: 2/3 milk, 1/3 water).\n\n• Step 2: Vessel 2 poured into Vessel 1 till Vessel 1 is full.\nVessel 1 needs 2/3 volume. It receives (2/3) × (2/3) = 4/9 milk and (2/3) × (1/3) = 2/9 water.\nVessel 1 now has: Milk = 1/3 + 4/9 = 7/9; Water = 2/9 (Total = 1).\nVessel 2 remaining volume = 1/3 (containing (1/3) × (2/3) = 2/9 milk and 1/9 water).\n\n• Step 3: Vessel 1 poured into Vessel 2 till Vessel 2 is full.\nVessel 2 needs 2/3 volume from Vessel 1.\nMilk transferred = (2/3) × (7/9) = 14/27.\nTotal milk in Vessel 2 = 2/9 + 14/27 = 6/27 + 14/27 = **20/27**."
+  },
+  {
+    "id": "allig_q22",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_4",
+    "type_name": "Type 4: Repeated Withdrawal & Successive Replacement",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "From a cask of wine, containing 64 liters, 8 liters are drawn out and the cask is filled up with water. If the same process is repeated a second, then a third time, what will be the proportion of wine to water in the resulting mixture?",
+    "options": [
+      "343 : 169",
+      "343 : 512",
+      "169 : 343",
+      "512 : 343",
+      "None of these"
+    ],
+    "correct": "343 : 169",
+    "explanation": "Using the successive replacement formula:\nQuantity of pure liquid remaining = Initial Quantity × [1 - (y / x)]ⁿ\nHere, x = 64 liters, y = 8 liters, and n = 3 operations:\nWine left = 64 × [1 - (8 / 64)]³ = 64 × (7 / 8)³ = 64 × (343 / 512) = 343 / 8 = 42.875 liters.\n\nQuantity of water = 64 - 42.875 = 21.125 liters = 169 / 8 liters.\nProportion of Wine to Water = (343/8) : (169/8) = **343 : 169**."
+  },
+  {
+    "id": "allig_q23",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_4",
+    "type_name": "Type 4: Repeated Withdrawal & Successive Replacement",
+    "difficulty": "Medium",
+    "points": 1,
+    "question": "A vessel contains 24 liters of milk. 4 liters are withdrawn and replaced by water. The process is repeated a second time. Find the ratio of milk to water in the resulting mixture?",
+    "options": [
+      "25 : 36",
+      "36 : 11",
+      "11 : 25",
+      "25 : 11",
+      "None of these"
+    ],
+    "correct": "25 : 11",
+    "explanation": "Using the successive dilution formula:\nQuantity of milk remaining = Initial Quantity × [1 - (y / x)]ⁿ\nHere, x = 24 liters, y = 4 liters, and n = 2 operations:\nMilk remaining = 24 × [1 - (4 / 24)]² = 24 × (5 / 6)² = 24 × (25 / 36) = 50 / 3 liters.\n\nQuantity of water = 24 - (50 / 3) = 22 / 3 liters.\nRatio of Milk : Water = (50 / 3) : (22 / 3) = 50 : 22 = **25 : 11**."
+  },
+  {
+    "id": "allig_q24",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_4",
+    "type_name": "Type 4: Repeated Withdrawal & Successive Replacement",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "Eight liters are drawn off from a vessel full of water and substituted by pure milk. Again, eight liters of the mixture are drawn off and substituted by pure milk. If the vessel now contains water and milk in the ratio 9 : 40, find the capacity of the vessel.",
+    "options": [
+      "14 liters",
+      "24 liters",
+      "16 liters",
+      "12 liters",
+      "None of these"
+    ],
+    "correct": "14 liters",
+    "explanation": "Let C be the capacity of the vessel.\nWater remaining after 2 operations:\nWater remaining / Total Capacity = [1 - (8 / C)]²\nGiven ratio of Water to Milk = 9 : 40 ⇒ Water / Total = 9 / (9 + 40) = 9 / 49.\n\nTherefore:\n[1 - (8 / C)]² = 9 / 49\n1 - (8 / C) = 3 / 7\n8 / C = 1 - 3/7 = 4 / 7\nC = (8 × 7) / 4 = **14 liters**."
+  },
+  {
+    "id": "allig_q25",
+    "module_id": "mod12",
+    "module_name": "Allegation",
+    "syllabus_lec": "ST-1 Mixture Mechanics",
+    "type_id": "type_4",
+    "type_name": "Type 4: Repeated Withdrawal & Successive Replacement",
+    "difficulty": "Hard",
+    "points": 1,
+    "question": "A 25-liters cylinder contains a mixture of oxygen and nitrogen, the volume of oxygen being 25% of total volume. A few liters of the mixture is released, and an equal amount of nitrogen is added. Then the same amount of the mixture as before is released and replaced by nitrogen for the second time. As a result, the oxygen content becomes 9% of the total volume. How many liters of mixture is released each time?",
+    "options": [
+      "15 liters",
+      "10 liters",
+      "14 liters",
+      "18 liters",
+      "None of these"
+    ],
+    "correct": "10 liters",
+    "explanation": "Total volume = 25 liters.\nInitial oxygen percentage = 25%.\nAfter 2 successive releases and replacements of x liters with pure nitrogen, the final oxygen percentage becomes 9%.\n\nFormula for concentration after n replacements:\nFinal Concentration / Initial Concentration = [1 - (x / Total)]ⁿ\n9% / 25% = [1 - (x / 25)]²\n9 / 25 = [1 - (x / 25)]²\nTaking square root on both sides:\n3 / 5 = 1 - (x / 25)\nx / 25 = 1 - 3/5 = 2 / 5\nx = 25 × (2 / 5) = **10 liters**."
+  }
+]

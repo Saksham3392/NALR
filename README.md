@@ -4,7 +4,7 @@
 [![Render Deploy](https://img.shields.io/badge/Deploy-Render-46E3B7.svg?logo=render)](render.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Pure Vanilla JS](https://img.shields.io/badge/Tech-Vanilla%20JS%20%7C%20CSS3%20%7C%20HTML5-orange.svg)](index.html)
-
+ 
 A high-performance, interactive MCQ practice and examination simulation platform built for Chitkara University's **Numerical Aptitude & Logical Reasoning-I (25UNI0110)** curriculum.
 
 ---

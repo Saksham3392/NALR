@@ -1,10 +1,11 @@
-# Numerical Aptitude & Logical Reasoning-I (25UNI0110) — NALR 
+# Numerical Aptitude & Logical Reasoning-I (25UNI0110) — NALR Masterclass
 
 [![Docker Ready](https://img.shields.io/badge/Docker-Ready-blue.svg?logo=docker)](Dockerfile)
 [![Render Deploy](https://img.shields.io/badge/Deploy-Render-46E3B7.svg?logo=render)](render.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Pure Vanilla JS](https://img.shields.io/badge/Tech-Vanilla%20JS%20%7C%20CSS3%20%7C%20HTML5-orange.svg)](index.html)
- 
+[![Question Pool](https://img.shields.io/badge/Question%20Pool-810%20Verified%20MCQs-emerald.svg)](quiz_questions.js)
+
 A high-performance, interactive MCQ practice and examination simulation platform built for Chitkara University's **Numerical Aptitude & Logical Reasoning-I (25UNI0110)** curriculum.
 
 ---
@@ -23,29 +24,43 @@ cd /d "c:\Users\Asus\Downloads\CSE AI 5th Sem\NALR\NALR MCQs" && python serve.py
 
 ---
 
-Features **535 verified questions** extracted directly from official university lecture slide decks, categorized into problem-solving subtabs with step-by-step mathematical explanations, interactive diagrammatic visualizers, in-browser presentation viewing, and a custom multi-topic examination generator.
+Features **810 verified questions** extracted directly from official university lecture slide decks, categorized into problem-solving subtabs with step-by-step mathematical explanations, interactive diagrammatic visualizers, in-browser presentation viewing, and a custom multi-topic examination generator.
 
 ---
 
-## 📖 ST-1 Syllabus Modules (535 Questions Database)
+## 📖 ST-1 Syllabus Modules (753 Questions Database)
 
 |   #    | Topic | Status | Questions Loaded | Problem-Solving Subtabs |
 | :----: | :--- | :---: | :---: | :--- |
 | **1**  | **Blood Relation** | ✅ Active | **34 Qs** | Family Tree (12 Qs), Group Caselets (7 Qs), Pointing & Dialogue (15 Qs) |
-| **2**  | **Coded Relation** | ✅ Active | **40 Qs** | Pointing/Dialogue (6 Qs), Family Tree (6 Qs), Jumbled (6 Qs), In-Laws (6 Qs), Lineage (5 Qs), Gender Traps (6 Qs), Conditions (5 Qs) |
+| **2**  | **Coded Relation** | ✅ Active | **18 Qs** | Forward Symbolic Chains (5 Qs), Target Relationship Finding (4 Qs), Arithmetic Operators (2 Qs), Reverse Relational Coding (3 Qs), Mixed Direction Lineage (4 Qs) |
 | **3**  | **Analogy** | ✅ Active | **50 Qs** | Word & GK (28 Qs), Number Sets (15 Qs), Letter & Alphabet (7 Qs) |
 | **4**  | **Direction Sense** | ✅ Active | **38 Qs** | Rotations & Clock Angles (10 Qs), Pythagoras Displacement (11 Qs), Relative Position (14 Qs), Shadow Scenarios (3 Qs) |
-| **5**  | **Number System** | ✅ Active | **77 Qs** | Unit Digits & Trailing Zeros (5 Qs), Factors & Primes (10 Qs), Divisibility Rules (25 Qs), Digit Reversal (6 Qs), Series Summation (11 Qs), Extra Practice (20 Qs) |
-| **6**  | **H.C.F. & L.C.M.** | ✅ Active | **60 Qs** | Prime Factorization (5 Qs), Real-World Track/Bell Applications (7 Qs), Remainder Divisibility Models (16 Qs), Product & Ratio Properties (12 Qs), Extra Practice (20 Qs) |
-| **7**  | **Average** | ✅ Active | **58 Qs** | Arithmetic Mean & Shifts (7 Qs), Inclusion/Exclusion/Replacement (7 Qs), Weighted Means & Alligation (8 Qs), Cricket Batting/Bowling (3 Qs), Average Speed & Distance (6 Qs), Hostel Mess & Demographics (7 Qs), Extra Practice (20 Qs) |
-| **8**  | **Remainder Theorem** | ✅ Active | **54 Qs** | Basic & Negative Remainder (8 Qs), Composite Expressions & Cancellation (11 Qs), Factorials & Last Two Digits (6 Qs), Power Forms & Cyclicity (15 Qs), Fermat, Wilson & Polynomials (14 Qs) |
+| **5**  | **Number System** | ✅ Active | **77 Qs** | Unit Digits & Trailing Zeros (5 Qs), Factors & Primes (10 Qs), Divisibility Rules (25 Qs), Digit Reversal (6 Qs), Series Summation (11 Qs), Extra Q (20 Qs) |
+| **6**  | **H.C.F. & L.C.M.** | ✅ Active | **52 Qs** | Fundamental HCF & LCM (5 Qs), Real-World Measurement & Tracks (5 Qs), Remainder Theorems & Divisibility Models (13 Qs), Product, Ratio & Factor Properties (9 Qs), Extra Q (20 Qs) |
+| **7**  | **Average** | ✅ Active | **58 Qs** | Arithmetic Mean & Shifts (7 Qs), Inclusion/Exclusion/Replacement (7 Qs), Weighted Means & Alligation (8 Qs), Cricket Batting/Bowling (3 Qs), Average Speed & Distance (6 Qs), Hostel Mess & Demographics (7 Qs), Extra Q (20 Qs) |
+| **8**  | **Remainder Theorem** | ✅ Active | **55 Qs** | Positive Numerator (4 Qs), Negative Numerator (4 Qs), Operations (9 Qs), Factorials (3 Qs), Unit & Last Two Digits (3 Qs), Simplification (2 Qs), Power Forms (9 Qs), Fermat & Wilson (13 Qs), Next Power (4 Qs), Algebraic Polynomials (4 Qs) |
 | **9**  | **Ratio & Proportion** | ✅ Active | **28 Qs** | Proportionals & Formulations (6 Qs), Currency Bags & Partitions (6 Qs), Mixture Dilutions & Alloys (9 Qs), Shifts, Incomes & Rates (7 Qs) |
 | **10** | **Ages** | ✅ Active | **26 Qs** | Ratio & Temporal Shifts (10 Qs), Sum/Difference Invariants (7 Qs), Product-Based Problems (4 Qs), Multi-Person Systems (5 Qs) |
 | **11** | **Partnership** | ✅ Active | **18 Qs** | Simple & Compound Investments (6 Qs), Variable Time & Inversion (7 Qs), Working Partners & Deductions (5 Qs) |
-| **12** | **Allegation** | ✅ Active | _Active in Visualizers_ | Rule of Alligation Cross & Mean Concentration Balance |
+| **12** | **Allegation** | ✅ Active | **25 Qs** | Mean Price & Basic Alligation Cross-Rule (7 Qs), Rate, Speed & Commercial Mixtures (7 Qs), Liquid Concentration & Vessel Mixing (7 Qs), Repeated Withdrawal & Replacement (4 Qs) |
 | **13** | **Odd One Out** | ✅ Active | **27 Qs** | Single Letter (2 Qs), Letter Pairs (7 Qs), Triplets & Letter Sets (18 Qs) |
 | **14** | **Syllogism** | ✅ Active | **25 Qs** | Direct Deductions (6 Qs), Complementary Either-Or Pairs (6 Qs), Multi-Premise Chains (10 Qs), Hybrid Either-Or (3 Qs) |
-|        | **Total Database Pool** | | **535 Questions** | **44 Problem Types Fully Verified** |
+| **15** | **FA1 Questions** | ✅ Active | **38 Qs** | Blood Relation (13 Qs), Coded Relation (9 Qs), Direction (16 Qs) |
+| **16** | **ST1 Questions** | ✅ Active | **112 Qs** | Number System (27 Qs), H.C.F. & L.C.M. (32 Qs), Average (29 Qs), Remainder Theorem (24 Qs) |
+| **17** | **FA2 Questions** | ✅ Active | **72 Qs** | Ratio & Proportion (38 Qs), Syllogism (34 Qs) |
+|        | **ST-1 Total Database** | | **753 Questions** | **70 Problem Types Fully Verified** |
+
+---
+
+## 📖 ST-2 Syllabus Modules (57 Active Questions)
+
+|   #    | Topic | Status | Questions Loaded | Problem-Solving Subtabs |
+| :----: | :--- | :---: | :---: | :--- |
+| **1**  | **Percentage** | ✅ Active | **34 Qs** | Basic Percentages & Comparison (6 Qs), Successive Percentage & Area Shifts (7 Qs), Price & Consumption (8 Qs), Exam Marks & Population (6 Qs), Mixture Dilution (3 Qs), Election Voting Models (4 Qs) |
+| **4**  | **Coding-Decoding** | ✅ Active | **23 Qs** | Letter Shifting & Rearrangement (7 Qs), Letter-to-Number & Symbolic (8 Qs), Fictitious Language & Substitution (4 Qs), Conditional Matrix Coding (4 Qs) |
+| **2-3, 5-11** | Alphabet Test, Math Ops, SI/CI, Profit & Loss, Series, AP/GP | ⏳ Staged | — | Upload Pending |
+|        | **ST-2 Total Active** | | **57 Questions** | **10 Problem Types Fully Verified** |
 
 ---
 
@@ -64,15 +79,17 @@ Features **535 verified questions** extracted directly from official university 
   - **Ages**: 3-epoch chronological milestone tracks (Past $\rightarrow$ Present $\rightarrow$ Future).
   - **Partnership**: Capital $\times$ Time equivalent matrix ($P \propto C \times T$) and proportional profit share bar.
   - **Allegation**: Vector SVG Alligation Cross diagram with diagonal subtraction vectors.
-  - **Odd Man Out**: Candidate spectrum grid displaying positional alphabet indices ($A=1 \dots Z=26$), interval steps, and pulsating anomaly beacons.
+  - **Odd One Out**: Candidate spectrum grid displaying positional alphabet indices ($A=1 \dots Z=26$), interval steps, and pulsating anomaly beacons.
   - **Syllogism**: Dynamic Euler-Venn diagrams (concentric, overlapping, disjoint) with Aristotle proposition tagging (A, E, I, O) and conclusion verification cards.
+  - **Percentage**: Percentage-fraction equivalence scales, successive net multipliers, and ratio breakdown bars.
+  - **Coding-Decoding**: Positional shift matrix, alphabetical forward/reverse tracks, and condition pattern mapping.
 
 - **In-Browser Presentation Viewer (`presentation_viewer.html`)**:
   - Embedded directly inside the topic header box via the **PPT** button with official PowerPoint logo.
   - Opens in a new tab to an in-browser document viewer with page scrubber, page thumbnails pane, full text search, print, zoom, and fullscreen support.
-  - Direct download button for original `.pptx` presentation files.
+  - Direct download button for presentation PDF files.
 
-- **3-Term Switcher Capsule**: Switch between **ST-1** (14 Modules, 535 questions), **ST-2** (11 Modules), and **End Term** (14 Modules) at any time.
+- **3-Term Switcher Capsule**: Switch between **ST-1** (17 Modules, 753 questions), **ST-2** (11 Modules, 57 active questions), and **End Term** (14 Modules) at any time.
 
 - **Dynamic Cursor Spotlight (Glow Border Follow)**:
   - Interactive specular radial gradient border (`--mouse-x`, `--mouse-y`) that follows the student's cursor across question cards and planner views.
@@ -92,6 +109,17 @@ Features **535 verified questions** extracted directly from official university 
   - Hardware compositor promotion (`contain: layout style paint`, `transform: translateZ(0)`, `backface-visibility: hidden`) across all SVG diagrams and interactive cards.
   - High-performance micro-virtualization using `content-visibility: auto` and `contain-intrinsic-size` on question cards, planner days, and exam result lists.
   - Event batching via `requestAnimationFrame` for pointermove and scroll listeners for locked 60+ FPS interaction.
+
+- **Apple Glass Depth & Specular Rim-Lighting**:
+  - Crisp specular top rim-light (`inset 0 1px 0 0 rgba(255, 255, 255, 0.75)` in Light Mode, `inset 0 1px 0 0 rgba(255, 255, 255, 0.16)` in Dark Mode) replicating macOS Sequoia & visionOS physical glass thickness.
+  - Slender 6px floating frosted glass scrollbars with rounded capsule thumbs that illuminate on drag.
+
+- **Tactile Micro-Interactions & In-Place Option Feedback**:
+  - **Zero-Refresh In-Place Lifecycle**: Answering, resetting, or bookmarking questions updates purely the target card in place with zero screen flicker or layout jumps.
+  - **Pure Chromatic Identity**: Completely removes ticks (`✓`) and crosses (`✕`), relying purely on clean, vibrant emerald green and crimson red palettes with typographic status pills.
+  - **Option Motion & Physics**: Spring elevation bounce (`scale(0.975 -> 1.025 -> 1.0)`) on correct choice, 220ms soft haptic shake on incorrect choice, and focus dimming on non-selected choices.
+  - **Eye-Guiding Green Pulse**: Smoothly pulses the true correct answer with glowing emerald light when an incorrect option is chosen.
+  - **Tactile Button Depress**: Native-feeling physical depress (`active: transform: scale(0.985);`) across all buttons, options, and navigation pills.
 
 - **One-Click `[ 📋 Copy ]` & `[ ✦ Gemini ]` Buttons**:
   - Copy formatted questions straight to clipboard.
@@ -118,10 +146,8 @@ Features **535 verified questions** extracted directly from official university 
 
 The repository includes detailed markdown references for developers and AI agents:
 
-- 📄 [**PRD.md**](PRD.md) — Comprehensive Product Requirements Document, user journeys, and pedagogical scope.
 - 🤖 [**AGENTS.md**](AGENTS.md) — Operational instructions, strict dataset schemas, zero runtime tolerance rules, and coding standards.
-- 🎨 [**DESIGN_SYSTEM.md**](DESIGN_SYSTEM.md) — Color tokens (Light & Dark), typography scale, Apple glass blur specifications, and component primitives.
-- 🏗️ [**ARCHITECTURE.md**](ARCHITECTURE.md) — System architecture, Mermaid dependency graph, script load order, state management, and presentation pipeline.
+- 🏗️ [**ARCHITECTURE.md**](ARCHITECTURE.md) — Master Technical Specification: System Architecture, Product Requirements, Design System Tokens, Visualizer Standards & Multi-Term Integration Guide.
 
 ---
 
@@ -161,7 +187,7 @@ Double-click `index.html` in your file explorer to open the application in any m
 
 ### Method 1: Render Static Site (Recommended — 100% Free & Fast)
 
-1. Push your code to a GitHub repository (see [GitHub Upload Guide](#-github-upload-guide) below).
+1. Push your code to a GitHub repository.
 2. Log in to [Render Dashboard](https://dashboard.render.com).
 3. Click **New +** → **Static Site**.
 4. Connect your GitHub repository.
@@ -191,25 +217,23 @@ Double-click `index.html` in your file explorer to open the application in any m
 ├── render.yaml                 # Infrastructure-as-code for Render deployment
 ├── .dockerignore               # Optimizes Docker build context
 ├── .gitignore                  # Standard Git ignore rules
-├── index.html                  # Main responsive UI layout & exam topic modal
+├── index.html                  # Main responsive UI layout & exam topic modal (v18.0)
 ├── presentation_viewer.html    # Standalone in-browser presentation document viewer
 ├── app.js                      # Core state management, practice & custom exam engine
-├── syllabus.js                 # 14 module definitions with subtab problem types
-├── quiz_questions.js           # 475 verified questions with solutions
-├── sound_effects.js            # Web Audio API procedural sound feedback
-├── confetti.js                 # Milestone celebration effects
-├── interactive_visualizers.js  # 14 dynamic formula & diagram visualizers
+├── syllabus.js                 # 3-Term syllabus definitions with subtab problem types
+├── quiz_questions.js           # 810 verified questions across ST1 & ST2
+├── sound_effects.js            # Combined Web Audio synthesizer & canvas celebration confetti
+├── interactive_visualizers.js  # Dedicated mathematical & diagrammatic visualizers for all topics
 ├── ppt_manifest.js             # Presentation metadata & page counts
-├── components.css              # Cards, modal dialogs, buttons & responsive grids
-├── main.css                    # Base theme variables, typography & layout resets
-├── visualizers.css             # Diagram styling for all 14 visualizers
-├── PRD.md                      # Product Requirements Document
+├── components.css              # Combined theme tokens, typography resets, components & glass UI
+├── visualizers.css             # Diagram styling for all interactive visualizers
+├── verify_dataset.py           # Automated multi-term dataset validation CLI
 ├── AGENTS.md                   # AI Coding Assistant Operational Guide
-├── DESIGN_SYSTEM.md            # Design System & Component Guidelines
-├── ARCHITECTURE.md             # System Architecture & Data Flow
-├── PPTs/                       # Source presentations, slide images & vector PDFs
-│   ├── slides/                 # Pre-rendered 1280x720 slide image sets
-│   └── pdf/                    # Pre-exported vector PDF presentations
+├── ARCHITECTURE.md             # Master Architecture, PRD, Design System & Developer Guide
+├── scratch/
+│   └── test_all_requirements.js# Authoritative Node.js test harness
+├── PPTs/                       # Source presentation assets
+│   └── pdf/                    # Pre-exported vector PDF presentations & Extra Q documents
 ├── serve.py                    # Lightweight Python HTTP server for local testing
 └── README.md                   # Complete documentation
 ```
@@ -218,4 +242,4 @@ Double-click `index.html` in your file explorer to open the application in any m
 
 ## 📝 License
 
-This project is open-source and available under the [MIT License](LICENSE). 
+This project is open-source and available under the [MIT License](LICENSE).
